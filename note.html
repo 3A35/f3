@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<title>  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+onload=function (){
+ note=localStorage.getItem(14821482);
+document.getElementById("noteid").value=note; 
+}
+
+
+
+function  get() {
+
+note=document.getElementById("noteid").value; 
+localStorage.setItem(14821482,note);
+ alert("儲存成功");
+}
+
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<textarea   id="noteid"  rows="20" cols="23"  placeholder="請輸入留言..."></textarea>
+<br><br>
+ <button  onclick="get();" >儲存 </button>
+
+
+
+
+
+
+
+</body>
+</html>
