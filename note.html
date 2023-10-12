@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>  </title>
+<title>***筆 記 本***</title>
 <meta charset="utf-8">
 <script type="text/javascript">
 onload=function (){
@@ -25,7 +25,19 @@ localStorage.setItem(14821482,note);
 
 <style type="text/css">
 
+#noteid{
+position:fixed;
+left:30px;
+top:200px;
+font-size:50px;
+}
 
+.clickcl{
+position:fixed;
+font-size:70px;
+left:100px;
+top:60px;
+}
 
 
 
@@ -33,9 +45,11 @@ localStorage.setItem(14821482,note);
 </style>
 </head>
 <body>
-<textarea   id="noteid"  rows="20" cols="23"  placeholder="請輸入留言..."></textarea>
-<br><br>
- <button  onclick="get();" >儲存 </button>
+<button class="clickcl" onclick="get();" >儲存 </button>
+<br><br><br><br>
+<textarea   id="noteid"  rows="20" cols="25"  placeholder="請輸入留言..."></textarea>
+
+
 
 
 
