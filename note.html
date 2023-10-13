@@ -10,14 +10,16 @@ document.getElementById("noteid").value=note;
 
 
 
-function  get() {
-
+function  savefu() {
 note=document.getElementById("noteid").value; 
 localStorage.setItem(14821482,note);
  alert("儲存成功");
 }
 
-
+function  deletefu() {
+document.getElementById("noteid").value=""; 
+ alert("刪除成功");
+}
 
 
 
@@ -32,17 +34,25 @@ top:200px;
 font-size:50px;
 }
 
-.clickcl{
+.savecl{
 position:fixed;
 font-size:70px;
 left:100px;
 top:60px;
 }
 
+.deletecl{
+position:fixed;
+font-size:70px;
+left:650px;
+top:60px;
+}
+
 </style>
 </head>
 <body>
-<button class="clickcl" onclick="get();" >儲存 </button>
+<button class="savecl" onclick="savefu();" >儲存 </button>
+<button class="deletecl" onclick="deletefu();" >刪除</button>
 <br><br><br><br>
 <textarea   id="noteid"  rows="20" cols="29"  placeholder="請輸入留言..."></textarea>
 
