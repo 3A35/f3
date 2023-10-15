@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 onload=function (){
+ccc=0;
+nu=0;
+document.getElementById("timeallid").style.display="none"; 
+document.getElementById("timeshowid").innerHTML="倒數時間 "+0; 
  note=localStorage.getItem(14821482);
 document.getElementById("noteid").value=note; 
 }
@@ -23,6 +27,46 @@ document.getElementById("noteid").value="";
 
 
 
+function  countdownfu() {
+
+document.getElementById("allid").style.display="none"; 
+document.getElementById("timeallid").style.display="block";
+
+}
+
+
+
+
+
+function  timerenterfu() {
+alw=document.getElementById("alwaysid");
+
+nu=document.getElementById("timeid").value;
+document.getElementById("timeallid").style.display="none"; 
+document.getElementById("allid").style.display="block";
+document.getElementById("timeshowid").innerHTML="剩餘時間 "+nu;  
+clo1=setInterval(step, 60000);
+function  step() {
+nu=nu-1;
+// alert(nu);
+document.getElementById("timeshowid").innerHTML="剩餘時間 "+nu; 
+if (nu==0) {
+clearInterval(clo1);
+alw.play();
+}
+}
+}
+
+
+function  musicstopfu() {
+clearInterval(clo1);
+alw.pause();
+
+}
+
+
+
+
 </script>
 
 <style type="text/css">
@@ -30,31 +74,94 @@ document.getElementById("noteid").value="";
 #noteid{
 position:fixed;
 left:30px;
-top:200px;
+top:270px;
 font-size:50px;
 }
 
 .savecl{
 position:fixed;
-font-size:70px;
-left:100px;
+font-size:50px;
+left:30px;
 top:60px;
 }
 
 .deletecl{
 position:fixed;
-font-size:70px;
-left:650px;
+font-size:50px;
+left:800px;
 top:60px;
 }
+
+#timeshowid{
+position:fixed;
+font-size:50px;
+left:180px;
+top:60px;
+}
+
+.musicstopcl{
+position:fixed;
+font-size:50px;
+left:180px;
+top:150px;
+}
+
+
+.countdowncl{
+position:fixed;
+font-size:50px;
+left:520px;
+top:60px;
+}
+
+
+.timecl{
+position:fixed;
+font-size:100px;
+left:100px;
+width:300px;
+top:600px;
+}
+
+
+#timerenterid{
+position:fixed;
+font-size:100px;
+left:450px;
+top:600px;
+}
+
+
+#timetid{
+position:fixed;
+font-size:100px;
+left:100px;
+top:850px;
+}
+
+
 
 </style>
 </head>
 <body>
+
+
+<div id="allid" >
 <button class="savecl" onclick="savefu();" >儲存 </button>
 <button class="deletecl" onclick="deletefu();" >刪除</button>
+<div id="timeshowid" >aaa </div>
+<button class="countdowncl" onclick="countdownfu();" >倒數設定</button>
+<button class="musicstopcl" onclick="musicstopfu();" >音樂停止</button>
 <br><br><br><br>
 <textarea   id="noteid"  rows="20" cols="29"  placeholder="請輸入留言..."></textarea>
+</div>
 
+<div id="timeallid">
+<div id="timetid" >請輸入時間 單位分 </div>
+<input type="text" id="timeid" class="timecl"  maxlength="3"  />
+<button id="timerenterid" onclick="timerenterfu();" >確認</button>
+</div>
+
+<audio id="alwaysid" src="always.mp4" loop controls="controls" hidden="true"></audio>
 </body>
 </html>
