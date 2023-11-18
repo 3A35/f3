@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+<title>Always 直到永遠</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ 
+function get(){
+document.getElementById("v2id").style.display="block" ;
+document.getElementById("tid").style.display="block" ; 
+document.getElementById("in").style.display="none" ;
+
+vv=document.getElementById("v2id");
+ 
+bl=document.getElementById("s2id");
+ 
+var ba= document.querySelector('.back');
+
+bl.play();
+
+count=0;
+
+kk=setInterval(step, 30);
+ba.style.left="-600px";
+function step(){
+count=count+1;
+if (count>0) {ba.style.left="-1200px";}
+
+
+
+if (count>650) {ba.style.left="-1350px";}
+if (count>700) {ba.style.left="-1450px";}
+if (count>800) {ba.style.left="-1400px";}
+
+if (count>850) {count=0;
+ba.style.left="-1300px";}
+
+//if (count>1300) { 
+
+// clearInterval(kk);
+// bl.pause();
+// document.getElementById("v2id").style.display="none" ;
+// }
+
+}
+}
+
+
+</script>
+
+<style type="text/css">
+.back{
+position:fixed;
+top:0;
+ left:-1800px;
+
+min-height: 1800px;
+
+}
+
+
+
+.tcl{
+position:fixed;
+top: 100px;
+left:0px;
+
+animation:blink 5s infinite;
+animation-delay: 1s  ;
+}
+
+@keyframes blink {
+ 0%{opacity:0;left:0px;}
+ 50%{opacity:1; left:100px;background-color:green;}
+ 100%{opacity:0;left:200px;}
+}
+</style>
+</head>
+<body>
+
+<div  id="v2id" style="display:none;">
+<video class="back" autoplay loop muted>
+<source src="bb.mp4">
+</video>
+</div>
+
+
+
+
+
+<dvi  class="tcl" id="tid" style="display:none;"  >
+<span style="font-size:100px;color:red;font-weight:bold;"></span>
+<span style="font-size:130px;color:yellow;font-weight:bold;">***週 末 愉 快***</span>
+</dvi>
+
+
+
+
+
+<audio id="s2id" src="bb.mp4" loop controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+
+</body>
+</html>
