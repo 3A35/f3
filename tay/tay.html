@@ -4,15 +4,29 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 
- function get(){
 
+
+ function get(){
 document.getElementById("in").style.display="none" ;
 
-document.getElementById("soapid").style.display="block" ;
+
+document.getElementById("tayvid").style.display="block" ;
 
 b3=document.getElementById("s3id");
 b3.currentTime = 3;
 b3.play();
+
+
+setTimeout(get1,9000);
+
+}
+
+
+ function get1(){
+
+document.getElementById("tayvid").style.display="none" ;
+document.getElementById("soapid").style.display="block" ;
+
 co=0;
 
  var um = 0;
@@ -108,6 +122,12 @@ height: 1800px;
 }
 
 
+.tayvcl{
+position:fixed;
+top:0;
+left:-1150px;
+height: 1800px;
+}
 
 
 
@@ -221,6 +241,12 @@ left:-100px;
 </video>
 </div>
 
+
+<div  id="tayvid" style="display:none;">
+<video class="tayvcl" autoplay loop muted>
+<source src="t.mp4">
+</video>
+</div>
 
 
 
