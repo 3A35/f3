@@ -41,8 +41,9 @@ co=0;
 ig = document.getElementById("imgId")
 
  function step() {
-re=(b3.ended);
-if (re==true){setTimeout(get3,1);}
+// re=(b3.ended);
+// alert(re);
+if (um==5){setTimeout(get3,1);}
 document.getElementById("tid").style.display="block" ;
 document.getElementById("t1id").style.display="block" ;
 document.getElementById("t2id").style.display="block" ;
@@ -106,12 +107,12 @@ if (i>0.9)  {i=1;
 
 
  function get3(){
-// clearInterval(clo1);
+ clearInterval(clo1);
 // document.getElementById("imgId").style.display="none" ;
 // ig.style.opacity=0;
 // end.currentTime =180;
 end=document.getElementById("endid");
-b3.pause;
+b3.pause();
 end.play();
 document.getElementById("did").style.display="none";
 document.getElementById("tayv1id").style.display="block" ;
