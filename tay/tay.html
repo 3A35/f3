@@ -13,8 +13,9 @@ document.getElementById("in").style.display="none" ;
 document.getElementById("tayvid").style.display="block" ;
 
 b3=document.getElementById("s3id");
+end=document.getElementById("endid");
 
-b3.currentTime = 3;
+b3.currentTime = 145;
 b3.play();
 
 
@@ -32,7 +33,7 @@ co=0;
 
  var um = 0;
 
- setInterval(step, 5000)
+ clo1=setInterval(step, 5000);
  
  i=0;
 
@@ -41,7 +42,7 @@ ig = document.getElementById("imgId")
 
  function step() {
 re=(b3.ended);
-if (re==true){history.go(0);}
+if (re==true){setTimeout(get3,1);}
 document.getElementById("tid").style.display="block" ;
 document.getElementById("t1id").style.display="block" ;
 document.getElementById("t2id").style.display="block" ;
@@ -103,6 +104,24 @@ if (i>0.9)  {i=1;
 
 }
 
+
+ function get3(){
+// clearInterval(clo1);
+// document.getElementById("imgId").style.display="none" ;
+// ig.style.opacity=0;
+end.currentTime =180;
+end.play();
+document.getElementById("did").style.display="none";
+document.getElementById("tayv1id").style.display="block" ;
+document.getElementById("tayvid").style.display="none" ;
+document.getElementById("did").style.display="none" ; 
+setTimeout(get4,6000);
+}
+
+
+ function get4(){
+ history.go(0);
+}
 </script>
 
 <style type="text/css">
@@ -132,6 +151,12 @@ height: 1800px;
 }
 
 
+.tayv1cl{
+position:fixed;
+top:0;
+left:-1450px;
+height: 1800px;
+}
 
 
 
@@ -210,6 +235,10 @@ left:-100px;
 </head>
 <body>
 
+
+
+
+
 <div  id="soapid" style="display:none;">
 <video class="soapcl" autoplay loop muted>
 <source src="sea.mp4">
@@ -256,12 +285,12 @@ left:-100px;
 
 
 
-
-
 <img src="photo/"+"1 (1).jpg" height="1800"  id="imgId" class="imgcl" style="display:none"/>  
 
 
 <audio id="s3id" src="whites.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="endid" src="t1.mp4" controls="controls" hidden="true"></audio>
 
 <div id="in"  >
 <input type="image" src="apple.jpg" height="1800"  onClick="get()">
@@ -284,6 +313,13 @@ left:-100px;
 <dvi  class="t2cl" id="t2id" style="display:none;"  >
 <div style="font-size:80px;color:pink;font-weight:bold;"></div>
 </dvi>
+
+
+<div  id="tayv1id" style="display:none;">
+<video class="tayv1cl" autoplay loop muted>
+<source src="t1.mp4">
+</video>
+</div>
 
 
 </body>
