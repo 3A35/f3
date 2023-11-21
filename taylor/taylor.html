@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+
+ function get(){
+document.getElementById("in").style.display="none" ;
+document.getElementById("seaid").style.display="block" ;
+v1=document.getElementById("v1id");
+v2=document.getElementById("v2id");
+v3=document.getElementById("v3id");
+v4=document.getElementById("v4id");
+vs1=document.getElementById("vs1id");
+vs2=document.getElementById("vs2id");
+vs3=document.getElementById("vs3id");
+vs4=document.getElementById("vs4id");
+most=document.getElementById("mostid");
+
+so1=document.getElementById("s1id");
+so2=document.getElementById("s2id");
+so3=document.getElementById("s3id");
+so4=document.getElementById("s4id");
+vs1.play();
+vs1.pause();
+vs2.play();
+vs2.pause();
+vs3.play();
+vs3.pause();
+vs4.play();
+vs4.pause();
+so1.play();
+so1.pause();
+so2.play();
+so2.pause();
+so3.play();
+so3.pause();
+so4.play();
+so4.pause();
+most.play();
+
+
+setTimeout(ss1,7000);
+
+}
+
+function ss1(){
+document.getElementById("seaid").style.display="none" ;
+most.pause();
+document.getElementById("v1id").style.display="block" ;
+so1.play();
+vs1.play();
+setTimeout(ss2,20000);
+}
+
+
+function ss2(){
+vs1.pause();
+so1.pause();
+document.getElementById("v1id").style.display="none" ;
+document.getElementById("v2id").style.display="block" ;
+so2.play();
+vs2.play();
+setTimeout(ss3,20000);
+}
+
+
+function ss3(){
+so2.pause();
+vs2.pause();
+document.getElementById("v1id").style.display="block" ;
+so3.play();
+vs3.play();
+setTimeout(ss4,20000);
+}
+
+
+function ss4(){
+so3.pause();
+vs3.pause();
+document.getElementById("v1id").style.display="none" ;
+document.getElementById("v2id").style.display="block" ;
+so4.play();
+vs4.play();
+setTimeout(ss5,20000);
+}
+
+
+function ss5(){
+so4.pause();
+vs4.pause();
+history.go(0);
+
+}
+
+
+</script>
+
+<style type="text/css">
+
+
+.v1cl{
+position:fixed;
+top:0;
+left:-1150px;
+height: 1800px;
+}
+
+
+.v2cl{
+position:fixed;
+top:0;
+left:-1150px;
+height: 1800px;
+}
+
+
+
+.v3cl{
+position:fixed;
+top:0;
+left:-1150px;
+height: 1800px;
+}
+
+
+.v4cl{
+position:fixed;
+top:0;
+left:-1150px;
+height: 1800px;
+}
+
+
+
+.seacl{
+position:fixed;
+top:0;
+left:-1150px;
+height: 1800px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<div  id="v1id" style="display:none;">
+<video class="v1cl" autoplay loop muted>
+<source src="v1.mp4">
+</video>
+</div>
+
+
+<div  id="v2id" style="display:none;">
+<video class="v2cl" autoplay loop muted>
+<source src="v2.mp4">
+</video>
+</div>
+
+
+<div  id="v3id" style="display:none;">
+<video class="v3cl" autoplay loop muted>
+<source src="v3.mp4">
+</video>
+</div>
+
+
+<div  id="v4id" style="display:none;">
+<video class="v4cl" autoplay loop muted>
+<source src="v4.mp4">
+</video>
+</div>
+
+
+<div  id="seaid" style="display:none;">
+<video class="seacl" autoplay loop muted>
+<source src="sea.mp4">
+</video>
+</div>
+
+
+
+<audio id="mostid" src="most.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="s1id" src="s1.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="s2id" src="s2.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="s3id" src="s3.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="s4id" src="s4.mp4" controls="controls" hidden="true"></audio>
+
+
+<audio id="vs1id" src="v1.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="vs2id" src="v2.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="vs3id" src="v3.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="vs4id" src="v4.mp4" controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="apple.jpg" height="1800"  onClick="get()">
+</div>
+
+
+
+
+
+</body>
+</html>
