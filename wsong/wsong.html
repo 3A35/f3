@@ -10,6 +10,7 @@
 tt=document.getElementById("tid");
 document.getElementById("in").style.display="none" ;
 document.getElementById("seaid").style.display="block" ;
+document.getElementById("tid").style.display="block" ;
 v1=document.getElementById("v1id");
 v2=document.getElementById("v2id");
 v3=document.getElementById("v3id");
@@ -43,54 +44,55 @@ so4.pause();
 most.play();
 
 
-setTimeout(ss1,7000);
+setTimeout(ss4,9000);
 
 }
 
 function ss1(){
 tt.innerHTML="第1名你所愛的人 The One You Love";
-document.getElementById("seaid").style.display="none" ;
-most.pause();
+vs2.pause();
+so2.pause();
+document.getElementById("v2id").style.display="none" ;
 document.getElementById("v1id").style.display="block" ;
 so1.play();
 vs1.play();
-setTimeout(ss2,30000);
+setTimeout(ss5,35000);
 }
 
 
 function ss2(){
 tt.innerHTML="第2名   do you remember";
-vs1.pause();
-so1.pause();
-document.getElementById("v1id").style.display="none" ;
+vs3.pause();
+so3.pause();
+document.getElementById("v3id").style.display="none" ;
 document.getElementById("v2id").style.display="block" ;
 so2.play();
 vs2.play();
-setTimeout(ss3,30000);
+setTimeout(ss1,35000);
 }
 
 
 function ss3(){
 tt.innerHTML="第3名   Everytime You Go Away";
-so2.pause();
-vs2.pause();
-document.getElementById("v2id").style.display="none" ;
+so4.pause();
+vs4.pause();
+document.getElementById("v4id").style.display="none" ;
 document.getElementById("v3id").style.display="block" ;
 so3.play();
 vs3.play();
-setTimeout(ss4,30000);
+setTimeout(ss2,35000);
 }
 
 
 function ss4(){
 tt.innerHTML="第4名   I Knew I Loved You";
-so3.pause();
-vs3.pause();
-document.getElementById("v3id").style.display="none" ;
+document.getElementById("seaid").style.display="none" ;
+most.pause();
+
 document.getElementById("v4id").style.display="block" ;
 so4.play();
 vs4.play();
-setTimeout(ss5,30000);
+setTimeout(ss3,35000);
 }
 
 
@@ -110,7 +112,7 @@ history.go(0);
 .v1cl{
 position:fixed;
 top:0;
-left:-1150px;
+left:-1450px;
 height: 1800px;
 }
 
@@ -118,7 +120,7 @@ height: 1800px;
 .v2cl{
 position:fixed;
 top:0;
-left:-1150px;
+left:-1300px;
 height: 1800px;
 }
 
@@ -127,7 +129,7 @@ height: 1800px;
 .v3cl{
 position:fixed;
 top:0;
-left:-1150px;
+left:-1200px;
 height: 1800px;
 }
 
@@ -135,7 +137,7 @@ height: 1800px;
 .v4cl{
 position:fixed;
 top:0;
-left:-1150px;
+left:-950px;
 height: 1800px;
 }
 
@@ -223,7 +225,7 @@ font-weight:bold;
 <input type="image" src="apple.jpg" height="1800"  onClick="get()">
 </div>
 
-<div id="tid" class="tcl" >最好聽的 4首西洋歌曲</div>
+<div id="tid" class="tcl" style="display:none;" >最好聽的 4首西洋歌曲</div>
 
 
 
