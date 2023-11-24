@@ -11,6 +11,7 @@ tt=document.getElementById("tid");
 document.getElementById("in").style.display="none" ;
 document.getElementById("seaid").style.display="block" ;
 document.getElementById("tid").style.display="block" ;
+document.getElementById("t2id").style.display="block" ;
 v1=document.getElementById("v1id");
 v2=document.getElementById("v2id");
 v3=document.getElementById("v3id");
@@ -56,7 +57,7 @@ document.getElementById("v2id").style.display="none" ;
 document.getElementById("v1id").style.display="block" ;
 so1.play();
 vs1.play();
-setTimeout(ss5,40000);
+setTimeout(ss5,52000);
 }
 
 
@@ -68,7 +69,7 @@ document.getElementById("v3id").style.display="none" ;
 document.getElementById("v2id").style.display="block" ;
 so2.play();
 vs2.play();
-setTimeout(ss1,40000);
+setTimeout(ss1,52000);
 }
 
 
@@ -111,7 +112,7 @@ history.go(0);
 
 .v1cl{
 position:fixed;
-top:300px;
+top:600px;
 left:-700px;
 height: 1200px;
 }
@@ -119,8 +120,8 @@ height: 1200px;
 
 .v2cl{
 position:fixed;
-top:300px;
-left:-400px;
+top:600px;
+left:-600px;
 height: 1200px;
 }
 
@@ -128,15 +129,15 @@ height: 1200px;
 
 .v3cl{
 position:fixed;
-top:300px;
-left:-400px;
+top:600px;
+left:-600px;
 height: 1200px;
 }
 
 
 .v4cl{
 position:fixed;
-top:300px;
+top:600px;
 left:-400px;
 height: 1200px;
 }
@@ -152,8 +153,8 @@ height: 1800px;
 
 .tcl{
 position:fixed;
-top:30px;
-left:10px;
+top:280px;
+left:30px;
 font-size:110px;
 color: white; 
 text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
@@ -161,6 +162,20 @@ text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
  font-weight:bold;
 
 }
+
+
+.t2cl{
+position:fixed;
+top:100px;
+left:30px;
+font-size:90px;
+color: yellow; 
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+
+ font-weight:bold;
+
+}
+
 
 
 </style>
@@ -228,8 +243,9 @@ text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 <input type="image" src="apple.jpg" height="1800"  onClick="get()">
 </div>
 
-<div id="tid" class="tcl" style="display:none;" >最好聽的 4首西洋歌曲</div>
+<div id="tid" class="tcl" style="display:none;" ></div>
 
+<div id="t2id" class="t2cl"  style="display:none;" >最好聽的 4首西洋歌曲</div>
 
 
 </body>
