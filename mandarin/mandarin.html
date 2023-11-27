@@ -9,20 +9,51 @@
  function get(){
 
 var req=new XMLHttpRequest();
-req.open("get","https://3a35.github.io/f3/mandarin/1.md");
+req.open("get","https://3a35.github.io/f3/mandarin/purpose.md");
 req.onload=function(){
-one=this.responseText;
-}
- 
+purpose=this.responseText;
 }
 req.send();
 
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/mandarin/1.md");
+req.onload=function(){
+rank1=this.responseText;
+}
+req.send();
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/mandarin/2.md");
+req.onload=function(){
+rank2=this.responseText;
+}
+req.send();
  
-alert(one);
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/mandarin/3.md");
+req.onload=function(){
+rank3=this.responseText;
+}
+req.send();
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/mandarin/4.md");
+req.onload=function(){
+rank4=this.responseText;
+}
+req.send();
 
 
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/mandarin/5.md");
+req.onload=function(){
+rank5=this.responseText;
+}
+req.send();
 
-
+document.getElementById("tid").innerHTML=purpose ; 
 
 t=document.getElementById("tid");
 t2=document.getElementById("t2id");
@@ -62,9 +93,9 @@ setTimeout(ss5,9000);
 }
 
 function ss1(){
-t.innerHTML="第1名";
-t2.innerHTML="此情永不渝";
-t3.innerHTML=" Nothing's Gonna Change My Love For You";
+t.innerHTML="";
+t2.innerHTML=rank1;
+t3.innerHTML="";
 
 vs2.pause();
 so2.pause();
@@ -77,9 +108,9 @@ setTimeout(ss6,52000);
 
 
 function ss2(){
-t.innerHTML="第2名";
-t2.innerHTML="美人當前無法抗拒";
-t3.innerHTML=" Weak in the Presence of Beauty ";
+t.innerHTML="";
+t2.innerHTML=rank2;
+t3.innerHTML="";
 vs3.pause();
 so3.pause();
 document.getElementById("v3id").style.display="none" ;
@@ -91,9 +122,9 @@ setTimeout(ss1,52000);
 
 
 function ss3(){
-t.innerHTML="第3名";
-t2.innerHTML="直到永遠";
-t3.innerHTML="Always ";
+t.innerHTML="";
+t2.innerHTML=rank3;
+t3.innerHTML="";
 so4.pause();
 vs4.pause();
 document.getElementById("v4id").style.display="none" ;
@@ -104,9 +135,9 @@ setTimeout(ss2,40000);
 }
 
 function ss4(){
-t.innerHTML="第4名";
-t2.innerHTML="哦女孩";
-t3.innerHTML="Oh Girl ";
+t.innerHTML="";
+t2.innerHTML=rank4;
+t3.innerHTML="";
 so5.pause();
 vs5.pause();
 
@@ -120,9 +151,9 @@ setTimeout(ss3,38000);
 }
 
 function ss5(){
-t.innerHTML="第5名";
-t2.innerHTML="電話訴衷情 ";
-t3.innerHTML=" I Just Called to Say I Love You";
+t.innerHTML="";
+t2.innerHTML=rank5;
+t3.innerHTML="";
 
 document.getElementById("seaid").style.display="none" ;
 document.getElementById("boxid").style.display="block" ;
@@ -188,7 +219,7 @@ height: 1300px;
 .v3cl{
 position:fixed;
 top:280px;
-left:-700px;
+left:-650px;
 height: 1300px;
 }
 
@@ -196,14 +227,14 @@ height: 1300px;
 .v4cl{
 position:fixed;
 top:280px;
-left:-350px;
+left:-650px;
 height: 1300px;
 }
 
 .v5cl{
 position:fixed;
 top:280px;
-left:-350px;
+left:-750px;
 height: 1300px;
 }
 
@@ -335,7 +366,7 @@ text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 <input type="image" src="apple.jpg" height="1920" width="1080"  onClick="get()">
 </div>
 
-<div id="tid" class="tcl"  style="display:none;" >最浪漫的西洋抒情歌曲</div>
+<div id="tid" class="tcl"  style="display:none;" ></div>
 
 <div id="t2id" class="t2cl" style="display:none;" ></div>
 
