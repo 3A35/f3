@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ 
+ function get(){
+
+
+document.getElementById("tid").style.display="black" ; 
+document.getElementById("in").style.display="none" ;
+document.getElementById("seaid").style.display="block" ;
+document.getElementById("aid").style.display="block" ; 
+
+back= document.querySelector('.back');
+
+back.style.left="1200px";
+
+bl=document.getElementById("s2id");
+ 
+
+
+count=setInterval(step,1000);
+ccc=0;
+
+function step(){
+ccc=ccc+1;
+ if (ccc == 2) {
+bl.play();
+back.style.left="-1200px";
+}
+
+ if (ccc == 30) {
+bl.pause();
+document.getElementById("aid").style.display="none" ; 
+back1= document.querySelector('.back1'); 
+back1.style.left="1200px";
+document.getElementById("bid").style.display="block" ; 
+
+}
+
+
+
+
+ if (ccc == 33) {
+bl.currentTime=0;
+bl.play();
+back1.style.left="-1200px";
+}
+
+
+
+
+ if (ccc == 60) {
+bl.pause();
+document.getElementById("bid").style.display="none" ; 
+back2= document.querySelector('.back2'); 
+back2.style.left="1200px";
+document.getElementById("cid").style.display="block" ; 
+
+}
+
+
+ if (ccc == 63) {
+bl.currentTime=0;
+bl.play();
+back2.style.left="-1200px";
+}
+
+
+
+ if (ccc == 91) {
+
+
+history.go(0);
+}
+
+
+
+}
+
+
+
+
+
+
+
+}
+</script>
+
+<style type="text/css">
+
+.seacl{
+position:fixed;
+top:0px;
+ left:-500px;
+height:1920px;
+}
+
+
+
+
+.back{
+position:fixed;
+top:0px;
+ left:-1200px;
+// width:1080px;
+height:1920px;
+}
+
+.back1{
+position:fixed;
+top:0px;
+ left:-1200px;
+// width:1080px;
+height:1920px;
+}
+
+
+.back2{
+position:fixed;
+top:0px;
+ left:-1200px;
+// width:1080px;
+height:1920px;
+}
+
+
+
+
+.tcl{
+position:fixed;
+top: 100px;
+left:0px;
+
+animation:blink 5s infinite;
+animation-delay: 1s  ;
+}
+
+@keyframes blink {
+ 0%{opacity:0;left:0px;}
+ 50%{opacity:1; left:100px;background-color:green;}
+ 100%{opacity:0;left:200px;}
+}
+</style>
+</head>
+<body>
+
+
+<div  id="seaid" style="display:none;">
+<video class="seacl" autoplay loop muted>
+<source src="sea.mp4">
+</video>
+</div>
+
+
+
+
+
+<div  id="aid" style="display:none;">
+<video class="back" autoplay loop muted>
+<source src="a.mp4">
+</video>
+</div>
+
+
+<div  id="bid" style="display:none;">
+<video class="back1" autoplay loop muted>
+<source src="b.mp4">
+</video>
+</div>
+
+
+<div  id="cid" style="display:none;">
+<video class="back2" autoplay loop muted>
+<source src="c.mp4">
+</video>
+</div>
+
+
+<dvi  class="tcl" id="tid" style="display:none;"  >
+<span style="font-size:100px;color:red;font-weight:bold;"></span>
+<span style="font-size:130px;color:yellow;font-weight:bold;">***美 女 寫 真***</span>
+</dvi>
+
+
+
+
+
+<audio id="s2id" src="whites.mp4" loop controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+
+</body>
+</html>
