@@ -18,7 +18,7 @@ back= document.querySelector('.back');
 back.style.left="800px";
 
 bl=document.getElementById("s2id");
- 
+bl.play(); 
 
 
 count=setInterval(step,1000);
@@ -27,12 +27,15 @@ ccc=0;
 function step(){
 ccc=ccc+1;
  if (ccc == 5) {
-bl.play();
+
 back.style.left="-1200px";
 }
 
  if (ccc == 30) {
 bl.pause();
+bl.currentTime=0;
+bl.play(); 
+
 document.getElementById("aid").style.display="none" ; 
 back1= document.querySelector('.back1'); 
 back1.style.left="800px";
@@ -44,8 +47,7 @@ document.getElementById("bid").style.display="block" ;
 
 
  if (ccc == 35) {
-bl.currentTime=0;
-bl.play();
+
 back1.style.left="-1200px";
 }
 
@@ -54,6 +56,8 @@ back1.style.left="-1200px";
 
  if (ccc == 60) {
 bl.pause();
+bl.currentTime=0;
+bl.play(); 
 document.getElementById("bid").style.display="none" ; 
 back2= document.querySelector('.back2'); 
 back2.style.left="800px";
@@ -63,8 +67,7 @@ document.getElementById("cid").style.display="block" ;
 
 
  if (ccc == 65) {
-bl.currentTime=0;
-bl.play();
+
 back2.style.left="-1200px";
 }
 
@@ -94,7 +97,7 @@ history.go(0);
 .seacl{
 position:fixed;
 top:0px;
- left:-500px;
+ left:0px;
 height:1920px;
 }
 
