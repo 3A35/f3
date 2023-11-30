@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ 
+ function get(){
+document.getElementById("in").style.display="none" ;
+document.getElementById("aid").style.display="block" ; 
+bl=document.getElementById("s2id");
+bl.play(); 
+
+}
+</script>
+
+<style type="text/css">
+
+.back{
+position:fixed;
+top:0px;
+ left:-1200px;
+height:1920px;
+}
+</style>
+</head>
+<body>
+
+
+<div  id="aid" style="display:none;">
+<video class="back" autoplay loop muted>
+<source src="a.mp4">
+</video>
+</div>
+
+
+
+
+<dvi  class="tcl" id="tid" style="display:none;"  >
+<span style="font-size:100px;color:red;font-weight:bold;"></span>
+<span style="font-size:130px;color:yellow;font-weight:bold;">***美 女 寫 真***</span>
+</dvi>
+
+
+
+
+
+<audio id="s2id" src="whites.mp4" loop controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+
+</body>
+</html>
