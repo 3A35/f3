@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+
+
+ function get(){
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/power/purpose.md");
+req.onload=function(){
+purpose=this.responseText;
+}
+req.send();
+
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/power/1.md");
+req.onload=function(){
+rank1=this.responseText;
+}
+req.send();
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/power/2.md");
+req.onload=function(){
+rank2=this.responseText;
+}
+req.send();
+ 
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/power/3.md");
+req.onload=function(){
+rank3=this.responseText;
+}
+req.send();
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/power/4.md");
+req.onload=function(){
+rank4=this.responseText;
+}
+req.send();
+
+
+var req=new XMLHttpRequest();
+req.open("get","https://3a35.github.io/f3/power/5.md");
+req.onload=function(){
+rank5=this.responseText;
+}
+req.send();
+
+document.getElementById("tid").innerHTML=purpose ; 
+document.getElementById("tid").style.top="500px";
+t=document.getElementById("tid");
+t2=document.getElementById("t2id");
+t3=document.getElementById("t3id");
+
+document.getElementById("in").style.display="none" ;
+document.getElementById("boxrid").style.display="block" ;
+document.getElementById("boxid").style.display="block" ;
+document.getElementById("seaid").style.display="block" ;
+document.getElementById("tid").style.display="block" ;
+document.getElementById("t2id").style.display="block" ;
+document.getElementById("t3id").style.display="block" ;
+
+v1=document.getElementById("v1id");
+v2=document.getElementById("v2id");
+v3=document.getElementById("v3id");
+v4=document.getElementById("v4id");
+v5=document.getElementById("v5id");
+vs1=document.getElementById("vs1id");
+vs2=document.getElementById("vs2id");
+vs3=document.getElementById("vs3id");
+vs4=document.getElementById("vs4id");
+vs5=document.getElementById("vs5id");
+most=document.getElementById("mostid");
+
+so1=document.getElementById("s1id");
+so2=document.getElementById("s2id");
+so3=document.getElementById("s3id");
+so4=document.getElementById("s4id");
+so5=document.getElementById("s5id");
+vs1.play();
+vs1.pause();
+vs2.play();
+vs2.pause();
+vs3.play();
+vs3.pause();
+vs4.play();
+vs4.pause();
+vs5.play();
+vs5.pause();
+so1.play();
+so1.pause();
+so2.play();
+so2.pause();
+so3.play();
+so3.pause();
+so4.play();
+so4.pause();
+so5.play();
+so5.pause();
+most.play();
+
+
+setTimeout(ss5,9000);
+
+}
+
+function ss1(){
+t.innerHTML="";
+t2.innerHTML=rank1;
+t3.innerHTML="";
+
+vs2.pause();
+so2.pause();
+document.getElementById("v2id").style.display="none" ;
+document.getElementById("v1id").style.display="block" ;
+so1.play();
+vs1.play();
+setTimeout(ss6,18000);
+}
+
+
+function ss2(){
+t.innerHTML="";
+t2.innerHTML=rank2;
+t3.innerHTML="";
+vs3.pause();
+so3.pause();
+document.getElementById("v3id").style.display="none" ;
+document.getElementById("v2id").style.display="block" ;
+so2.play();
+vs2.play();
+setTimeout(ss1,18000);
+}
+
+
+function ss3(){
+t.innerHTML="";
+t2.innerHTML=rank3;
+t3.innerHTML="";
+so4.pause();
+vs4.pause();
+document.getElementById("v4id").style.display="none" ;
+document.getElementById("v3id").style.display="block" ;
+so3.play();
+vs3.play();
+setTimeout(ss2,18000);
+}
+
+function ss4(){
+t.innerHTML="";
+t2.innerHTML=rank4;
+t3.innerHTML="";
+so5.pause();
+vs5.pause();
+
+document.getElementById("boxid").style.display="block" ;
+most.pause();
+document.getElementById("v5id").style.display="none" ;
+document.getElementById("v4id").style.display="block" ;
+so4.play();
+vs4.play();
+setTimeout(ss3,18000);
+}
+
+function ss5(){
+t.innerHTML="";
+t2.innerHTML=rank5;
+t3.innerHTML="";
+
+document.getElementById("seaid").style.display="none" ;
+document.getElementById("boxid").style.display="block" ;
+most.pause();
+
+document.getElementById("v5id").style.display="block" ;
+so5.play();
+vs5.play();
+setTimeout(ss4,18000);
+}
+
+
+function ss6(){
+so1.pause();
+vs1.pause();
+history.go(0);
+
+}
+
+
+</script>
+
+<style type="text/css">
+
+ #boxid{
+position:fixed;
+top:0px;
+left:0px;
+ width:1080px;
+height:1920px;
+background-color:black;
+}
+
+ #boxrid{
+position:fixed;
+top:0px;
+left:1080px;
+ width:2000px;
+height:1920px;
+background-color:black;
+}
+
+
+
+
+.v1cl{
+position:fixed;
+top:280px;
+left:-550px;
+height: 1300px;
+}
+
+
+.v2cl{
+position:fixed;
+top:280px;
+left:-500px;
+height: 1300px;
+}
+
+
+
+.v3cl{
+position:fixed;
+top:280px;
+left:-650px;
+height: 1300px;
+}
+
+
+.v4cl{
+position:fixed;
+top:280px;
+left:-650px;
+height: 1300px;
+}
+
+.v5cl{
+position:fixed;
+top:280px;
+left:-750px;
+height: 1300px;
+}
+
+.seacl{
+position:fixed;
+top:0px;
+left:-800px;
+height: 1800px;
+}
+
+
+
+
+.tcl{
+position:fixed;
+top:10px;
+left:30px;
+font-size:80px;
+color: yellow; 
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+
+ font-weight:bold;
+
+}
+
+
+.t2cl{
+ position:fixed;
+margin-top:100px;
+left:30px;
+font-size:70px;
+color: white; 
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+
+ font-weight:bold;
+
+}
+
+
+.t3cl{
+ position:fixed;
+
+margin-top:180px;
+left:30px;
+font-size:70px;
+color: orange; 
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+
+ font-weight:bold;
+
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<div id="boxid"  style="display:none;"></div>
+
+<div  id="seaid" style="display:none;">
+<video class="seacl" autoplay loop muted>
+<source src="sea.mp4">
+</video>
+</div>
+
+
+<div  id="v1id" style="display:none;">
+<video class="v1cl" autoplay loop muted>
+<source src="v1.mp4">
+</video>
+</div>
+
+
+<div  id="v2id" style="display:none;">
+<video class="v2cl" autoplay loop muted>
+<source src="v2.mp4">
+</video>
+</div>
+
+
+<div  id="v3id" style="display:none;">
+<video class="v3cl" autoplay loop muted>
+<source src="v3.mp4">
+</video>
+</div>
+
+
+<div  id="v4id" style="display:none;">
+<video class="v4cl" autoplay loop muted>
+<source src="v4.mp4">
+</video>
+</div>
+
+<div  id="v5id" style="display:none;">
+<video class="v5cl" autoplay loop muted>
+<source src="v5.mp4">
+</video>
+</div>
+
+
+
+
+<audio id="mostid" src="most.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="s1id" src="s1.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="s2id" src="s2.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="s3id" src="s3.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="s4id" src="s4.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="s5id" src="s5.mp4" controls="controls" hidden="true"></audio>
+
+
+<audio id="vs1id" src="m1.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="vs2id" src="m2.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="vs3id" src="m3.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="vs4id" src="m4.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="vs5id" src="m5.mp4" controls="controls" hidden="true"></audio>
+
+<div id="in"  >
+<input type="image" src="apple.jpg" height="1920" width="1080"  onClick="get()">
+</div>
+
+<div id="tid" class="tcl"  style="display:none;" ></div>
+
+<div id="t2id" class="t2cl" style="display:none;" ></div>
+
+<div id="t3id" class="t3cl" style="display:none;" ></div>
+<div id="boxrid" style="display:none;" ></div>
+
+</body>
+</html>
