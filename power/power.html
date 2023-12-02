@@ -54,15 +54,16 @@ rank5=this.responseText;
 req.send();
 
 document.getElementById("tid").innerHTML=purpose ; 
-document.getElementById("tid").style.top="500px";
+document.getElementById("tid").style.top="400px";
 t=document.getElementById("tid");
 t2=document.getElementById("t2id");
 t3=document.getElementById("t3id");
 
 document.getElementById("in").style.display="none" ;
 document.getElementById("boxrid").style.display="block" ;
+
 document.getElementById("boxid").style.display="block" ;
-document.getElementById("seaid").style.display="block" ;
+document.getElementById("headid").style.display="block" ;
 document.getElementById("tid").style.display="block" ;
 document.getElementById("t2id").style.display="block" ;
 document.getElementById("t3id").style.display="block" ;
@@ -84,6 +85,9 @@ so2=document.getElementById("s2id");
 so3=document.getElementById("s3id");
 so4=document.getElementById("s4id");
 so5=document.getElementById("s5id");
+heads=document.getElementById("headsid");
+heads.play();
+
 vs1.play();
 vs1.pause();
 vs2.play();
@@ -170,11 +174,13 @@ setTimeout(ss3,18000);
 }
 
 function ss5(){
+
+heads.pause();
 t.innerHTML="";
 t2.innerHTML=rank5;
 t3.innerHTML="";
 
-document.getElementById("seaid").style.display="none" ;
+document.getElementById("headid").style.display="none" ;
 document.getElementById("boxid").style.display="block" ;
 most.pause();
 
@@ -257,10 +263,14 @@ left:-750px;
 height: 1300px;
 }
 
-.seacl{
+
+
+
+
+.headcl{
 position:fixed;
 top:0px;
-left:-800px;
+left:-1000px;
 height: 1800px;
 }
 
@@ -315,9 +325,9 @@ text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 
 <div id="boxid"  style="display:none;"></div>
 
-<div  id="seaid" style="display:none;">
-<video class="seacl" autoplay loop muted>
-<source src="sea.mp4">
+<div  id="headid" style="display:none;">
+<video class="headcl" autoplay loop muted>
+<source src="head.mp4">
 </video>
 </div>
 
@@ -358,6 +368,7 @@ text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 
 
 
+
 <audio id="mostid" src="most.mp4" controls="controls" hidden="true"></audio>
 
 <audio id="s1id" src="s1.mp4" controls="controls" hidden="true"></audio>
@@ -380,6 +391,8 @@ text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 <audio id="vs4id" src="m4.mp4" controls="controls" hidden="true"></audio>
 
 <audio id="vs5id" src="m5.mp4" controls="controls" hidden="true"></audio>
+
+<audio id="headsid" src="heads.mp4" controls="controls" hidden="true"></audio>
 
 <div id="in"  >
 <input type="image" src="apple.jpg" height="1920" width="1080"  onClick="get()">
