@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+<title>weekend</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+ 
+document.getElementById("in").style.display="none" ;
+
+document.getElementById("imgId").style.display="block" ;
+ box = document.querySelector('#boxid');
+
+
+ 
+ b1=document.getElementById("b1");
+ b1.currentTime = 0;
+ b1.play();
+var ig = new Image(); 
+
+ var um = 1;
+ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+
+ setInterval(step, 6000);
+
+
+
+
+
+ function step() {
+document.getElementById("tid").style.display="block" ;
+  um++; 
+ 
+ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+ig.onload = function(){  }
+ig.onerror =function(){
+um--;
+document.getElementById("imgId").src="photo/"+'1 (1).jpg';
+um=1;
+}
+ document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+wi=1080;
+ cl=setInterval(opac,8);
+document.getElementById("boxid").style.display="block" ;
+
+function opac() {
+box.style.width = wi+"px";
+wi=wi-10;
+if (wi<0)  {clearInterval(cl);}
+}
+
+
+
+
+}
+}
+
+
+</script>
+
+<style type="text/css">
+
+
+
+
+#imgId{
+position: fixed;
+  top: 0px;
+  left: -50px;
+  width: 1080px;
+  height: 1920px;
+}
+
+
+.tcl{
+position:fixed;
+top: 0px;
+left:0px;
+background-color:yellow;
+}
+
+
+
+ #boxid{
+position:fixed;
+top:0px;
+left:0px;
+ width:1080px;
+height:1920px;
+background-color:black;
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+<audio id="b1" src="beca.mp4" loop controls="controls" hidden="true"></audio>
+
+<img src="photo/"+"1 (1).jpg"  id="imgId" style="display:none"/>  
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+<dvi  class="tcl" id="tid" style="display:none"  >
+<div style="font-size:120px;color:red;font-weight:bold;">週末愉快</div>
+</dvi>
+
+
+<img id="boxid" style="display:none" />  
+</body>
+</html>
