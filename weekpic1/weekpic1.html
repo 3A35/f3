@@ -17,12 +17,12 @@ document.getElementById("imgId").style.display="block" ;
  b1=document.getElementById("b1");
  b1.currentTime = 0;
  b1.play();
-var ig = new Image(); 
+ ig = document.getElementById("imgId");
 
  var um = 0;
 
-
-setTimeout(step,1);
+document.getElementById("tid").style.display="block" ;
+setTimeout(step,10);
 
 
 
@@ -31,19 +31,17 @@ setTimeout(step,1);
  function step() {
 
 
-document.getElementById("tid").style.display="block" ;
+
   um++; 
  
-ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
-ig.onload = function(){  }
+ig.src="photo/"+'1 ('+ um + ').jpg';
 ig.onerror =function(){
-um--;
-document.getElementById("imgId").src="photo/"+'1 (1).jpg';
+ig.src="photo/"+'1 ('+ um + ').jpg';
 um=1;
 }
- document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+
 wi=1080;
- cl=setInterval(opac,7);
+ cl=setInterval(opac,6);
 document.getElementById("boxid").style.display="block" ;
 
 function opac() {
@@ -51,7 +49,7 @@ box.style.width = wi+"px";
 wi=wi-10;
 if (wi<0)  {
 clearInterval(cl);
-setTimeout(step,5000);
+setTimeout(step,3000);
 
 }
 }
@@ -84,6 +82,9 @@ position:fixed;
 top: 0px;
 left:0px;
 background-color:yellow;
+border:none;
+border-radius:10px;
+padding: 10px 20px;
 }
 
 
@@ -114,7 +115,7 @@ background-color:black;
 </div>
 
 <dvi  class="tcl" id="tid" style="display:none"  >
-<div style="font-size:120px;color:red;font-weight:bold;">週末愉快</div>
+<div style="font-size:90px;color:red;font-weight:bold;">週末愉快</div>
 </dvi>
 
 
