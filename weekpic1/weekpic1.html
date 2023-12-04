@@ -21,12 +21,12 @@ document.getElementById("imgId").style.display="block" ;
  b1.play();
  ig = document.getElementById("imgId");
 
- var um = 0;
+ var um = 1;
 
 setTimeout(step,10);
 
  function step() {
-  um++;  
+   
 if(um>14) {um=1;}
 ig.src="photo/"+'1 ('+ um + ').jpg';
 
@@ -38,7 +38,8 @@ wi=1080;
 function opac() {
 box.style.width = wi+"px";
 wi=wi-10;
-if (wi<0)  {
+if (wi<0)  { 
+um++;
 clearInterval(cl);
 setTimeout(step,4000);
 
