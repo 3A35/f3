@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
 <title>weekend</title>
@@ -8,7 +9,8 @@
 
  
 document.getElementById("in").style.display="none" ;
-
+document.getElementById("boxid").style.display="block" ;
+document.getElementById("tid").style.display="block" ;
 document.getElementById("imgId").style.display="block" ;
  box = document.querySelector('#boxid');
 
@@ -21,35 +23,26 @@ document.getElementById("imgId").style.display="block" ;
 
  var um = 0;
 
-document.getElementById("tid").style.display="block" ;
 setTimeout(step,10);
 
-
-
-
-
  function step() {
-
-
-
-  um++; 
- 
+  um++;  
 ig.src="photo/"+'1 ('+ um + ').jpg';
 ig.onerror =function(){
-ig.src="photo/"+'1 ('+ um + ').jpg';
+ig.src="photo/"+'1 ('+ 1 + ').jpg';
 um=1;
 }
 
 wi=1080;
- cl=setInterval(opac,6);
-document.getElementById("boxid").style.display="block" ;
+ cl=setInterval(opac,7);
+
 
 function opac() {
 box.style.width = wi+"px";
 wi=wi-10;
 if (wi<0)  {
 clearInterval(cl);
-setTimeout(step,3000);
+setTimeout(step,5000);
 
 }
 }
