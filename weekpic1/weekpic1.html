@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <head>
 <title>weekend</title>
@@ -10,8 +9,6 @@
  
 document.getElementById("in").style.display="none" ;
 document.getElementById("boxid").style.display="block" ;
-document.getElementById("tid").style.display="block" ;
-document.getElementById("imgId").style.display="block" ;
  box = document.querySelector('#boxid');
 
 
@@ -21,26 +18,42 @@ document.getElementById("imgId").style.display="block" ;
  b1.play();
  ig = document.getElementById("imgId");
 
- var um = 1;
+ var um = 0;
 
-setTimeout(step,20);
+document.getElementById("tid").style.display="block" ;
+
+setTimeout(step,10);
 
  function step() {
- wi=1080;
-box.style.width = wi+"px";  
-if(um>14) {um=1;}
+box.style.width = 1080+"px";
+document.getElementById("imgId").style.display="none" ;
+  um++; 
+ 
 ig.src="photo/"+'1 ('+ um + ').jpg';
+ig.onerror =function(){
+ig.src="photo/"+'1 ('+ um + ').jpg';
+um=1;
+}
+
+setTimeout(st,300);
+ function st() {
+
+document.getElementById("imgId").style.display="block" ;
+setTimeout(st1,10);
+}
 
 
 
- cl=setInterval(opac,15);
+ function st1() {
+
+wi=1080;
+ cl=setInterval(opac,6);
 
 
 function opac() {
 box.style.width = wi+"px";
 wi=wi-10;
-if (wi<11)  { 
-um++;
+if (wi<0)  {
 clearInterval(cl);
 setTimeout(step,5000);
 
@@ -48,7 +61,7 @@ setTimeout(step,5000);
 }
 
 
-
+}
 
 }
 }
@@ -89,7 +102,6 @@ left:0px;
  width:1080px;
 height:1920px;
 background-color:black;
-border:none;
 }
 
 
