@@ -41,17 +41,17 @@ um=1;
 }
 to=0;
 le=0;
-wi=1080;
+wi=1150;
  cl=setInterval(opac,5);
 
 function opac() {
 ig.style.width=wi+"px";
 ig.style.left=le+"px";
-ig.style.top=to+"px";
+ig.style.top=50+to+"px";
 le=le-0.1;
 to=to-0.17778;
 wi=wi+0.2;
-if (wi>1300)  {
+if (wi>1700)  {
 clearInterval(cl);
 setTimeout(step,3000);
 
