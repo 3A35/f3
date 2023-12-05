@@ -42,15 +42,15 @@ um=1;
 to=0;
 le=0;
 wi=1080;
- cl=setInterval(opac,50);
+ cl=setInterval(opac,5);
 
 function opac() {
 ig.style.width=wi+"px";
 ig.style.left=le+"px";
 ig.style.top=to+"px";
-le=le-1;
-to=to-1.78;
-wi=wi+1;
+le=le-0.1;
+to=to-0.17778;
+wi=wi+0.2;
 if (wi>1300)  {
 clearInterval(cl);
 setTimeout(step,3000);
@@ -74,9 +74,9 @@ setTimeout(step,3000);
 
 #imgId{
 position: fixed;
-  top: 0px;
-  left: -50px;
-  width: 600px;
+ // top: 0px;
+ // left: -50px;
+ // width: 1080px;
 //  height: 1920px;
 }
 
