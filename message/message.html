@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ 
+ function get(){
+document.getElementById("in").style.display="none" ;
+document.getElementById("aid").style.display="block" ; 
+document.getElementById("bu1id").style.display="block" ;
+document.getElementById("bu2id").style.display="block";
+
+bl=document.getElementById("s2id");
+bl.play(); 
+
+}
+
+
+ function bu1fu(){
+document.getElementById("bu1id").style.display="none" ;
+document.getElementById("bu2id").style.display="none";
+document.getElementById("upid").style.display="block" ;
+document.getElementById("itemsid2").style.display="block";
+
+}
+
+
+
+ function bu2fu(){
+
+
+}
+
+
+
+
+
+
+
+</script>
+
+<style type="text/css">
+
+.back{
+position:fixed;
+top:0px;
+ left:-1200px;
+height:1920px;
+}
+
+#itemsid2{
+ position:fixed;
+  top: 1450px;
+  left:40px;
+  font-size:60px;
+   color:green;
+}
+
+
+ .upcl{
+ position:fixed;
+  top: 1550px; 
+  left:650px;
+ // width:200px;
+  background: orangered;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 4rem;
+  outline: none;
+  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+ }
+
+
+.bu1cl{
+ position:fixed;
+  top: 1550px; 
+  left:150px;
+ // width:200px;
+  background: red;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 4rem;
+  outline: none;
+  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+}
+
+.bu2cl{
+ position:fixed;
+  top: 1550px; 
+  left:650px;
+ // width:200px;
+  background: blue;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 4rem;
+  outline: none;
+  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div  id="aid" style="display:none;">
+<video class="back" autoplay loop muted>
+<source src="a.mp4">
+</video>
+</div>
+
+
+
+
+
+<div id="upid" style="display:none;">
+<form action="#" method="post" name="google">
+ 
+<textarea   id="itemsid2" name="fr"  rows="5" cols="15" style="display:none;" placeholder="請輸入留言..."></textarea>
+
+<button onclick="upfu( )"><div class="upcl" >發送留言</button>
+</form>
+</div>
+
+
+
+
+
+
+<audio id="s2id" src="whites.mp4" loop controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+<button id="bu1id" class="bu1cl" style="display:none;" onclick="bu1fu();" >留 言 </button>
+<button id="bu2id" class="bu2cl" style="display:none;" onclick="bu2fu();" >觀看留言</button>
+
+</body>
+
+<script type="text/javascript">
+
+  const scriptURL='https://script.google.com/macros/s/AKfycbxeF3TX1dxc6gRMmh0vcKfl3iZ8NsAcw13AHMnbYtnzk4NQk5SZ185L_u0m-w76PrK_/exec'
+
+        const form = document.forms['google']
+          
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("留言已送出！！"))
+              .catch(error => console.error('Error!', error.message))
+          })
+function upfu(){
+document.getElementById("bu1id").style.display="block" ;
+document.getElementById("bu2id").style.display="block";
+document.getElementById("upid").style.display="none" ;
+document.getElementById("itemsid2").style.display="none";
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
