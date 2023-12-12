@@ -32,7 +32,14 @@ document.getElementById("itemsid2").style.display="block";
 
 }
 
+ function offfu(){
+document.getElementById("upid").style.display="none" ;
+document.getElementById("bu1id").style.display="block" ;
+document.getElementById("bu2id").style.display="block";
 
+
+
+}
 
 
 
@@ -51,16 +58,17 @@ height:1920px;
 
 #itemsid2{
  position:fixed;
-  top: 500px;
+  top: 700px;
   left:40px;
   font-size:50px;
    color:green;
-}
+border-radius:10px;
+ }
 
 
  .upcl{
  position:fixed;
-  top: 500px; 
+  top: 700px; 
   left:650px;
  // width:200px;
   background: orangered;
@@ -69,8 +77,25 @@ height:1920px;
   padding: 5px 10px;
   font-size: 4rem;
   outline: none;
+border-radius:15px;
   box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
  }
+
+ .offcl{
+ position:fixed;
+  top: 850px; 
+  left:650px;
+ // width:200px;
+  background: green;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+border-radius:15px;
+  font-size: 4rem;
+  outline: none;
+  box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+ }
+
 
 
 .bu1cl{
@@ -79,6 +104,7 @@ height:1920px;
   left:150px;
  // width:200px;
   background: red;
+border-radius:15px;
   border: none;
   color: white;
   padding: 5px 10px;
@@ -90,10 +116,11 @@ height:1920px;
 .bu2cl{
  position:fixed;
   top: 1450px; 
-  left:650px;
+  left:600px;
  // width:200px;
   background: blue;
   border: none;
+border-radius:15px;
   color: white;
   padding: 5px 10px;
   font-size: 4rem;
@@ -124,6 +151,7 @@ height:1920px;
 
 <button onclick="upfu( )"><div class="upcl" >留言送出</button>
 </form>
+<button onclick="offfu( )"><div class="offcl" >取消</button>
 </div>
 
 
@@ -141,6 +169,7 @@ height:1920px;
 
 <button id="bu1id" class="bu1cl" style="display:none;" onclick="bu1fu();" >留 言 </button>
 <button id="bu2id" class="bu2cl" style="display:none;" onclick="bu2fu();" >觀看留言</button>
+
 
 </body>
 
