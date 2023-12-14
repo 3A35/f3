@@ -28,7 +28,7 @@ document.getElementById("itemsid2").style.display="block";
 
 
  function bu2fu(){
-open('https://script.google.com/macros/s/AKfycbw2kyICvB7s9-0swJz6I34q6LNrG_dl1uU_xVG1NgnWoCcYlreNQ-BYJKrAVJQ00rDZ/exec ');
+open('https://script.google.com/macros/s/AKfycbwjcyj4rru7U1ChlpVKUk3brCnsCgs5btimMn98i-flwSgW94F_JBt85haciuPCRvuN/exec ');
 }
 
  function offfu(){
@@ -57,7 +57,7 @@ height:1920px;
 
 #itemsid2{
  position:fixed;
-  top: 700px;
+  top: 750px;
   left:40px;
   font-size:50px;
    color:green;
@@ -67,7 +67,7 @@ border-radius:10px;
 
  .upcl{
  position:fixed;
-  top: 700px; 
+  top: 750px; 
   left:650px;
  // width:200px;
   background: orangered;
@@ -82,7 +82,7 @@ border-radius:15px;
 
  .offcl{
  position:fixed;
-  top: 850px; 
+  top: 880px; 
   left:650px;
  // width:200px;
   background: green;
@@ -128,6 +128,28 @@ border-radius:15px;
 }
 
 
+#nameid {
+ position:fixed;
+  top: 650px; 
+width:400px;
+  left:40px;
+font-size: 60px;
+border-radius:15px;
+  padding: 5px 10px;
+}
+
+#nameinputid{
+ position:fixed;
+  top: 570px; 
+border-radius:15px;
+  padding: 5px 10px;
+background: blue;
+color: yellow;
+  left:40px;
+font-size: 60px;
+}
+
+
 </style>
 </head>
 <body>
@@ -145,9 +167,9 @@ border-radius:15px;
 
 <div id="upid" style="display:none;">
 <form action="#" method="post" name="google">
- 
+<div  id="nameinputid">請輸入名字</div>
+<input type="text" id="nameid" name="發送者"     value="不知名"/>
 <textarea   id="itemsid2" name="最新留言"  rows="5" cols="15" style="display:none;" placeholder="請輸入留言..."></textarea>
-
 <button onclick="upfu( )"><div class="upcl" >留言送出</button>
 </form>
 <button onclick="offfu( )"><div class="offcl" >取消</button>
@@ -185,11 +207,15 @@ border-radius:15px;
               .catch(error => console.error('Error!', error.message))
           })
 function upfu(){
+var Today=new Date();
+time=Today.getFullYear()+ "_" + (Today.getMonth()+1) + "_" + Today.getDate() + "_"+Today.getHours()+"_"+Today.getMinutes();
+
 document.getElementById("bu1id").style.display="block" ;
 document.getElementById("bu2id").style.display="block";
 document.getElementById("upid").style.display="none" ;
 document.getElementById("itemsid2").style.display="none";
-
+items2=document.getElementById("itemsid2").value;
+document.getElementById("itemsid2").value=" "+time+" "+items2;
 }
 </script>
 
