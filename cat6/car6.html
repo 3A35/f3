@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ 
+ function get(){
+document.getElementById("in").style.display="none" ;
+document.getElementById("aid").style.display="block" ; 
+document.getElementById("id1").style.display="block" ;
+document.getElementById("id2").style.display="block" ;  
+bl=document.getElementById("s2id");
+bl.play(); 
+
+}
+</script>
+
+<style type="text/css">
+
+.back{
+position:fixed;
+top:0px;
+ left:-1450px;
+height:1800px;
+}
+
+
+#id1{
+font-weight:bold;
+position:fixed;
+top:10px;
+ left:30px;
+font-size:100px;
+color:red;
+}
+
+
+#id2{
+font-weight:bold;
+position:fixed;
+top:30px;
+ left:600px;
+font-size:80px;
+color:yellow;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div  id="aid" style="display:none;">
+<video class="back" autoplay loop muted>
+<source src='a.mp4'>
+</video>
+</div>
+
+
+
+
+<dvi  class="tcl" id="tid" style="display:none;"  >
+
+<span style="font-size:130px;color:brown;font-weight:bold;">***晚 安***</span>
+</dvi>
+
+
+
+
+
+<audio id="s2id" src="m.mp4" loop controls="controls" hidden="true"></audio>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+<div id="id1" style="display:none;">玫瑰的故事</>  
+
+<div id="id2" style="display:none;">周潤發 張曼玉</>  
+
+</body>
+</html>
