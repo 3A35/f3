@@ -8,7 +8,7 @@
  function get(){
 document.getElementById("in").style.display="none" ;
 document.getElementById("aid").style.display="block" ; 
-document.getElementById("bid").style.display="block" ; 
+document.getElementById("snowid").style.display="block" ; 
 bl=document.getElementById("s2id");
 bl.play(); 
 
@@ -41,6 +41,33 @@ top:900px;
  left:200px;
 
 }
+
+
+
+.snowcl{
+position:fixed;
+top: 0px;
+left:-500px;
+height:1800px;
+animation:snowclk 6s infinite;
+animation-delay: 0s  ;
+
+}
+
+
+@keyframes snowclk {
+ 0%{opacity:0.1;}
+20%{opacity:0.3;}
+40%{opacity:0.5;}
+60%{opacity:0.3;}
+80%{opacity:0.2;}
+100%{opacity:0.1;}
+}
+
+
+
+
+
 
 </style>
 </head>
@@ -75,6 +102,11 @@ top:900px;
 <input type="image" src="miki.jpg" width="1200"  onClick="get()">
 </div>
 
+<div  id="snowid" style="display:none;">
+<video class="snowcl" autoplay loop muted>
+<source src="b.mp4">
+</video>
+</div>
 
 
 
