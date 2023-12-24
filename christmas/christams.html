@@ -10,13 +10,12 @@ document.getElementById("waiceng").style.display="none" ;
 document.getElementById("tiddd").style.display="block" ;  
  
 document.getElementById("shid").style.display="block" ;
-document.getElementById("b1last").style.display="block" ;
 
 
-
-
-b1last=document.getElementById("b1");
  b1.play();
+ b1.pause();
+
+ b1last.play();
 setTimeout(get,7000)
 }
 
@@ -69,6 +68,9 @@ setTimeout(lastvfu,20000)
 }
 
  function lastvfu(){
+  b1last.pause();
+ b1.play();
+
 document.getElementById("waiceng").style.display="none" ; 
 document.getElementById("lastvid").style.display="block" ; 
 
@@ -245,7 +247,7 @@ position: fixed;
 <body>
 
 <audio id="b1" src="jingle.mp4" loop controls="controls" hidden="true"></audio>
-<audio id="b1last" src="Last Christmas.m4a" loop"></audio>
+<audio id="b1last" src="Last Christmas.m4a"  loop controls="controls" hidden="true"></audio>
 
 
 <div  id="mv" style="display:none;">
