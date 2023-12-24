@@ -53,7 +53,7 @@ var i=1
  i++;
 }
 
-setTimeout(mp,13000)
+setTimeout(mp,9000)
 
 
 function mp(){
@@ -68,12 +68,21 @@ document.getElementById("tpid").style.display="none" ;
 document.getElementById("tid").style.display="none" ; 
 document.getElementById("mv").style.display="none" ; 
 
-setTimeout(lasttree,20000)
+setTimeout(lastvfu,20000)
 }
 }
 
- function lasttree(){
+ function lastvfu(){
 document.getElementById("waiceng").style.display="none" ; 
+document.getElementById("lastvid").style.display="block" ; 
+
+
+setTimeout(lasttree,9000)
+}
+
+
+ function lasttree(){
+document.getElementById("lastvid").style.display="none" ;
 document.getElementById("lastid").style.display="block" ; 
 document.getElementById("photosl").style.display="block" ; 
 document.getElementById("photosr").style.display="block" ; 
@@ -107,6 +116,16 @@ left:-1500px;
 min-width:100%;
 min-height:100%;
 }
+
+
+.video-back1{
+position:fixed;
+top:0;
+left:-400px;
+min-width:100%;
+min-height:100%;
+}
+
 
  .tct{
 position: fixed;
@@ -238,6 +257,14 @@ position: fixed;
 <source src="school.mp4">
 </video>
 </div>
+
+
+<div  id="lastvid" style="display:none;">
+<video class="video-back1" autoplay loop muted>
+<source src="lastv.mp4">
+</video>
+</div>
+
 
 
 
