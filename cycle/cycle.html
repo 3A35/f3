@@ -10,6 +10,7 @@
 document.getElementById("in").style.display="none" ;
 
 document.getElementById("vid").style.display="block" ;
+document.getElementById("snowid").style.display="block" ; 
 document.getElementById("tid").style.display="block" ;
 tt=document.getElementById("tid") ;
 
@@ -76,6 +77,31 @@ height:1920px;
 
 
 
+.snowcl{
+position:fixed;
+top: 0px;
+left:-500px;
+height:1800px;
+animation:snowclk 6s infinite;
+animation-delay: 0s  ;
+
+}
+
+
+@keyframes snowclk {
+ 0%{opacity:0;}
+10%{opacity:0.2;}
+20%{opacity:0.3;}
+40%{opacity:0.4;}
+50%{opacity:0.5;}
+60%{opacity:0.4;}
+70%{opacity:0.3;}
+80%{opacity:0.2;}
+90%{opacity:0;}
+100%{opacity:0;}
+}
+
+
 </style>
 </head>
 <body>
@@ -98,6 +124,14 @@ height:1920px;
 <dvi  class="tcl" id="tid" style="display:none"  >
 <div style="font-size:120px;color:red;font-weight:bold;"></div>
 </dvi>
+
+<div  id="snowid" style="display:none;">
+<video class="snowcl" autoplay loop muted>
+<source src="b.mp4">
+</video>
+</div>
+
+
 
 
 </body>
