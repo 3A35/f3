@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+ 
+document.getElementById("in").style.display="none" ;
+
+document.getElementById("vid").style.display="block" ;
+document.getElementById("snowid").style.display="block" ; 
+document.getElementById("tid").style.display="block" ;
+tt=document.getElementById("tid") ;
+ly1=document.getElementById("lyrics1id");
+ly2=document.getElementById("lyrics2id");
+ly1.style.display="block"; 
+ly2.style.display="block"; 
+ 
+ b1=document.getElementById("b1");
+ b1.currentTime = 0;
+ b1.play();
+ setInterval(step, 13000);
+
+ var um = 5;
+vv = document.querySelector('.vcl');
+tt.innerHTML="人氣指數 第5名";
+vv.style.left="-1000px";
+
+setInterval(step1, 1000);
+ function step1() {
+ti=Math.round(b1.currentTime);
+
+if (ti==6) {
+ly1.innerHTML="誰人在我生命裡　";
+ly2.innerHTML="";
+}
+
+if (ti==9) {
+ly1.innerHTML="";
+ly2.innerHTML="翻起一串愛的漣漪";
+}
+
+
+
+if (ti==14) {
+ly1.innerHTML="翻起遍遍的愛詩";
+ly2.innerHTML="";
+}
+
+if (ti==20) {
+ly1.innerHTML="";
+ly2.innerHTML="為何在我生命裡";
+}
+
+
+
+if (ti==26) {
+ly1.innerHTML="此刻失去愛的意義";
+ly2.innerHTML="";
+}
+
+if (ti==30) {
+ly1.innerHTML="";
+ly2.innerHTML="失去愛的驚喜";
+}
+
+
+
+if (ti==37) {
+ly1.innerHTML="可不可以 ";
+ly2.innerHTML="";
+}
+
+if (ti==40) {
+ly1.innerHTML="";
+ly2.innerHTML="給我一個解釋";
+}
+
+
+if (ti==44) {
+ly1.innerHTML="說什麼愛情永遠";
+ly2.innerHTML="";
+}
+
+if (ti==49) {
+ly1.innerHTML="";
+ly2.innerHTML="一瞬間卻改變心意";
+}
+
+
+
+if (ti==52) {
+ly1.innerHTML="可不可以";
+ly2.innerHTML="";
+}
+
+if (ti==56) {
+ly1.innerHTML="";
+ly2.innerHTML="給我一個解釋";
+}
+
+
+
+if (ti==59) {
+ly1.innerHTML="為什麼男歡女愛";
+ly2.innerHTML="";
+}
+
+if (ti==66) {
+ly1.innerHTML="";
+ly2.innerHTML="或許逼不得已";
+}
+
+
+
+
+if (ti==69) {
+ly1.innerHTML="";
+ly2.innerHTML="";
+ b1.currentTime = 0;
+ ti==0;
+}
+
+
+}
+
+ function step() {
+
+  um--; 
+ tt.innerHTML="人氣指數 第"+um+"名";
+if (um==5) {vv.style.left="-1000px";}
+if (um==4) {vv.style.left="-1200px";}
+if (um==3) {vv.style.left="-1300px";}
+if (um==2) {vv.style.left="-1400px";}
+if (um==1) {vv.style.left="-1400px";}
+vv.src="v/"+'1 ('+ um + ').mp4';
+if (um==1) {um=6;}
+}
+}
+
+
+
+</script>
+
+<style type="text/css">
+
+
+
+
+
+#imgId{
+position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 1080px;
+  height: 1920px;
+}
+
+
+.tcl{
+position:fixed;
+top: 0px;
+left:0px;
+font-size:80px;
+background-color:yellow;
+}
+
+
+
+.vcl{
+position:fixed;
+top:0px;
+ left:-1200px;
+height:1920px;
+}
+
+
+
+.snowcl{
+position:fixed;
+top: 0px;
+left:-500px;
+height:1800px;
+animation:snowclk 6s infinite;
+animation-delay: 0s  ;
+
+}
+
+
+@keyframes snowclk {
+ 0%{opacity:0;}
+10%{opacity:0.2;}
+20%{opacity:0.3;}
+40%{opacity:0.4;}
+50%{opacity:0.5;}
+60%{opacity:0.4;}
+70%{opacity:0.3;}
+80%{opacity:0.2;}
+90%{opacity:0;}
+100%{opacity:0;}
+}
+
+
+
+.lyrics1cl{
+position:fixed;
+top:850px;
+left:50px;
+font-size:90px;
+color: white; 
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+width:900px;
+ font-weight:bold;
+
+}
+
+
+.lyrics2cl{
+position:fixed;
+top: 1100px;
+left:50px;
+font-size:90px;
+color:white;
+width:900px;
+font-weight:bold;
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+<audio id="b1" src="beca.mp4" loop controls="controls" hidden="true"></audio>
+
+<div  id="vid" style="display:none;">
+<video class="vcl" autoplay loop muted>
+<source src="v/1 (5).mp4">
+</video>
+</div>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+<dvi  class="tcl" id="tid" style="display:none"  >
+<div style="font-size:120px;color:red;font-weight:bold;"></div>
+</dvi>
+
+<div  id="snowid" style="display:none;">
+<video class="snowcl" autoplay loop muted>
+<source src="b.mp4">
+</video>
+</div>
+
+
+<div id="lyrics1id" class="lyrics1cl" style="display:none;"></div>
+<div id="lyrics2id" class="lyrics2cl" style="display:none;"></div>
+
+
+
+</body>
+</html>
