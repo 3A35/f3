@@ -23,7 +23,7 @@ ly2.style.display="block";
  b1.play();
  setInterval(step, 13000);
 
- var um = 6;
+ var um = 7;
 vv = document.querySelector('.vcl');
 tt.innerHTML="Happy New Year 2024";
 vv.style.left="-1000px";
@@ -129,7 +129,8 @@ ly2.innerHTML="";
  function step() {
 
   um--; 
- tt.innerHTML="祝 2024 元 旦 快 樂";
+ tt.innerHTML="2024元旦 快樂";
+if (um==7) {vv.style.left="-1200px";}
 if (um==6) {vv.style.left="-1200px";}
 if (um==5) {vv.style.left="-1000px";}
 if (um==4) {vv.style.left="-1300px";}
@@ -137,7 +138,7 @@ if (um==3) {vv.style.left="-1300px";}
 if (um==2) {vv.style.left="-1400px";}
 if (um==1) {vv.style.left="-1400px";}
 vv.src="v/"+'1 ('+ um + ').mp4';
-if (um==1) {um=7;}
+if (um==1) {um=8;}
 }
 }
 
@@ -240,7 +241,7 @@ text-shadow: green 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 
 <div  id="vid" style="display:none;">
 <video class="vcl" autoplay loop muted>
-<source src="v/1 (5).mp4">
+<source src="v/1 (7).mp4">
 </video>
 </div>
 
