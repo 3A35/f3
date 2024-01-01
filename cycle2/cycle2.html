@@ -23,7 +23,7 @@ ly2.style.display="block";
  b1.play();
  setInterval(step, 13000);
 
- var um = 5;
+ var um = 6;
 vv = document.querySelector('.vcl');
 tt.innerHTML="Happy New Year 2024";
 vv.style.left="-1000px";
@@ -32,7 +32,7 @@ setInterval(step1, 1000);
  function step1() {
 ti=Math.round(b1.currentTime);
 
-if (ti==6) {
+if (ti==1) {
 ly1.innerHTML="2024 龍年行大運 ";
 ly2.innerHTML="";
 }
@@ -51,13 +51,13 @@ ly2.innerHTML="";
 
 if (ti==20) {
 ly1.innerHTML="";
-ly2.innerHTML="祝你在新的一年裡，一天比一天更快樂，每天都充滿著幸福與快樂";
+ly2.innerHTML="祝你在新的一年裡，每天都充滿著幸福與快樂";
 }
 
 
 
 if (ti==26) {
-ly1.innerHTML="一年的收穫，一年的幸福，從今年的元旦開始！祝元旦快樂！新年快樂！";
+ly1.innerHTML="一年的收穫，一年的幸福，從今年的元旦開始！";
 ly2.innerHTML="";
 }
 
@@ -75,7 +75,7 @@ ly2.innerHTML="";
 
 if (ti==40) {
 ly1.innerHTML="";
-ly2.innerHTML="祝你一帆風順，二龍騰飛，三羊開泰，四季平安，五福臨門，六六大順";
+ly2.innerHTML="祝你一帆風順，二龍騰飛，三羊開泰，四季平安";
 }
 
 
@@ -86,13 +86,13 @@ ly2.innerHTML="";
 
 if (ti==49) {
 ly1.innerHTML="";
-ly2.innerHTML="東方送你搖錢樹，西方送你永安康，南方送你成功路，北方送你錢滿倉。四面八方全送到金銀財寶當頭照";
+ly2.innerHTML="東方送你搖錢樹，西方送你永安康，南方送你成功路，北方送你錢滿倉";
 }
 
 
 
 if (ti==52) {
-ly1.innerHTML="關閉的是昔日憂煩；刪除的是昨日苦悶，儲存的是快樂不斷；流逝的是傷心過往，入懷的是愛情甜甜";
+ly1.innerHTML="關閉的是昔日憂煩，儲存的是快樂不斷，入懷的是愛情甜甜";
 ly2.innerHTML="";
 }
 
@@ -104,7 +104,7 @@ ly2.innerHTML="天天龍有錢、好運龍吼力、錢錢龍總來、事事龍�
 
 
 if (ti==59) {
-ly1.innerHTML="光，照耀著四季芬芳；風霜，迎來了百花爭香；笑容，讓人們美滿開懷";
+ly1.innerHTML="照耀著四季芬芳；風霜，迎來了百花爭香；笑容，讓人們美滿開懷";
 ly2.innerHTML="";
 }
 
@@ -130,13 +130,14 @@ ly2.innerHTML="";
 
   um--; 
  tt.innerHTML="祝 2024 元 旦 快 樂";
+if (um==6) {vv.style.left="-1200px";}
 if (um==5) {vv.style.left="-1000px";}
-if (um==4) {vv.style.left="-1200px";}
+if (um==4) {vv.style.left="-1300px";}
 if (um==3) {vv.style.left="-1300px";}
 if (um==2) {vv.style.left="-1400px";}
 if (um==1) {vv.style.left="-1400px";}
 vv.src="v/"+'1 ('+ um + ').mp4';
-if (um==1) {um=6;}
+if (um==1) {um=7;}
 }
 }
 
@@ -208,9 +209,9 @@ animation-delay: 0s  ;
 position:fixed;
 top:850px;
 left:50px;
-font-size:90px;
+font-size:80px;
 color: white; 
-text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+text-shadow: green 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 width:900px;
  font-weight:bold;
 
@@ -221,11 +222,11 @@ width:900px;
 position:fixed;
 top: 1100px;
 left:50px;
-font-size:90px;
+font-size:80px;
 color:white;
 width:900px;
 font-weight:bold;
-text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+text-shadow: green 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 }
 
 
