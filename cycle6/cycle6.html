@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+k=11;
+g=84; 
+um=1;
+document.getElementById("in").style.display="none" ;
+
+document.getElementById("vid").style.display="block" ;
+
+document.getElementById("tid").style.display="block" ;
+tt=document.getElementById("tid") ;
+
+ly1=document.getElementById("lyrics1id");
+ly2=document.getElementById("lyrics2id");
+ly1.style.display="block"; 
+ly2.style.display="block"; 
+ 
+ b1=document.getElementById("b1");
+ b1.currentTime = 4;
+ b1.play();
+ setInterval(step, 8000);
+
+
+vv = document.querySelector('.vcl');
+
+vv.style.left="-2050px";
+
+setInterval(step1, 1000);
+
+ function step1() {
+ti=Math.round(b1.currentTime);
+
+if (ti==8) {
+ly1.innerHTML="If I  had to live my life without you near me";
+ly2.innerHTML="如果我的人生沒有你在身旁　";
+}
+
+
+
+
+if (ti==15) {
+ly1.innerHTML="The days would all be empty";
+ly2.innerHTML="日子將是一片空白";
+}
+
+if (ti==19) {
+ly1.innerHTML="The nights would seem so long";
+ ly2.innerHTML="夜晚將是如此漫長";
+ }
+
+
+
+if (ti==25) {
+ly1.innerHTML="With you I see forever oh so clearly";
+ly2.innerHTML="與你在一起，我永遠看得如此清楚";
+}
+
+if (ti==30) {
+ly1.innerHTML="I might have been in love before";
+ly2.innerHTML="或許我以前曾經戀愛過";
+}
+
+
+/*
+
+
+
+
+
+
+    */
+
+
+
+
+if (ti==35) {
+ly1.innerHTML="But it never felt this strong ";
+ly2.innerHTML="但從未感覺如此強烈";
+}
+
+if (ti==38) {
+ly1.innerHTML="Our dreams are young and we both know";
+ly2.innerHTML="我們的夢想青澀稚嫩，我們都知道";
+}
+
+
+if (ti==42) {
+ly1.innerHTML="They ll take us where we want to go";
+ly2.innerHTML="它們會引領我們到達嚮往之地";
+}
+
+if (ti==45) {
+ly1.innerHTML="Hold me now, touch me now ";
+ly2.innerHTML="現在請擁抱我，現在請觸摸我";
+}
+
+
+
+if (ti==48) {
+ly1.innerHTML="I don’t want to live without you";
+ly2.innerHTML="我不想過沒有你的人生";
+}
+
+
+if (ti==52) {
+ly1.innerHTML="Nothing’s gonna change my love for you";
+ly2.innerHTML="沒有什麼可以改變我對你的愛";
+}
+
+if (ti==56) {
+ly1.innerHTML="You ought to know by now how much I love you";
+ly2.innerHTML="此刻你應該知道我有多麼深愛你";
+}
+
+if (ti==60) {
+ly1.innerHTML="One thing you can be sure of";
+ly2.innerHTML="有一件事你可以肯定";
+}
+
+
+
+if (ti==64) {
+ly1.innerHTML="I’ll never ask for more than your love";
+ly2.innerHTML="除了你的愛，我不會奢求更多";
+}
+
+if (ti==68) {
+ly1.innerHTML="Nothing’s gonna change my love for you";
+ly2.innerHTML="但是 沒有什麼可以改變我對你的愛";
+}
+
+
+if (ti==71) {
+ly1.innerHTML="You ought to know by now how much I love you ";
+ly2.innerHTML="此刻你應該知道我有多麼深愛你";
+}
+
+if (ti==76) {
+ly1.innerHTML="You’ll only change my whole life through but";
+ly2.innerHTML="你只會改變我的一生";
+}
+
+
+if (ti==79) {
+ly1.innerHTML="Nothing’s gonna change my love for you";
+ly2.innerHTML="但是，沒有什麼可以改變我對你的愛";
+}
+
+if (ti==83) {
+ly1.innerHTML="If the road ahead is not so easy";
+ly2.innerHTML="如果前方的道路並不平坦";
+}
+
+
+
+if (ti==92) {
+ly1.innerHTML="";
+ly2.innerHTML="";
+}
+
+
+
+
+
+if (ti==94) {
+
+ b1.currentTime = 0;
+ ti==0;
+}
+
+
+}
+
+ function step() {
+um++; 
+// tt.innerHTML=um;
+if (um==1) {vv.style.left="-1850px";
+vv.style.top="0px";
+}
+if (um==2) {vv.style.left="-1250px";
+vv.style.top="100px";
+}
+if (um==3) {vv.style.left="-1300px";
+
+}
+
+if (um==4) {vv.style.left="-1300px";
+vv.style.top="0px";
+}
+if (um==5) {vv.style.left="-1300px";
+vv.style.top="100px";
+}
+if (um==6) {vv.style.left="-1200px";
+
+}
+
+if (um==7) {vv.style.left="-2400px";
+vv.style.top="100px";
+}
+if (um==8) {vv.style.left="-1200px";
+
+}
+
+if (um==9) {vv.style.left="-1300px";
+
+}
+
+if (um==10) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==11) {vv.style.left="-1200px";
+
+}
+
+vv.src="v/"+'1 ('+ um + ').mp4';
+if (um==k) {um=0;}
+}
+}
+
+
+
+</script>
+
+<style type="text/css">
+
+
+
+
+
+#imgId{
+position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 1080px;
+  height: 1920px;
+}
+
+
+.tcl{
+position:fixed;
+top: 0px;
+left:0px;
+font-size:55px;
+font-weight:bold;
+// text-shadow: red 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+background-color:yellow;
+}
+
+
+.tcl1{
+position:fixed;
+top: 60px;
+left:0px;
+font-size:75px;
+font-weight:bold;
+// text-shadow: red 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+background-color:yellow;
+}
+
+.vcl{
+position:fixed;
+top:0px;
+left:-1200px;
+height:1920px;
+}
+
+
+
+
+
+
+
+.lyrics1cl{
+position:fixed;
+top:800px;
+left:50px;
+font-size:90px;
+color: white; 
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+width:900px;
+ font-weight:bold;
+
+}
+
+
+.lyrics2cl{
+position:fixed;
+top: 1100px;
+left:50px;
+font-size:90px;
+color:white;
+width:900px;
+font-weight:bold;
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+}
+
+.divcl {
+position:fixed;
+top: 0px;
+left:1000px;
+height:1920px;
+width:2500px;
+background-color:yellow;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<audio id="b1" src="beca.mp4" loop controls="controls" hidden="true"></audio>
+
+<div  id="vid" style="display:none;">
+<video class="vcl" autoplay loop muted>
+<source src="v/1 (1).mp4">
+</video>
+</div>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+<dvi  class="tcl" id="tid" style="display:none"  >
+<dvi style="font-size:50px;color:red;font-weight:bold;">Nothing’s Gonna Change My Love For You</dvi>
+<dvi  class="tcl1" style="font-size:70px;color:red;font-weight:bold;">此情永不渝</dvi>
+</dvi>
+
+
+
+<div class="divcl"></div>
+
+
+<div id="lyrics1id" class="lyrics1cl" style="display:none;"></div>
+<div id="lyrics2id" class="lyrics2cl" style="display:none;"></div>
+
+<div
+
+</body>
+</html>
