@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+
+document.getElementById("in").style.display="none" ;
+
+document.getElementById("soapid").style.display="block" ;
+
+b3=document.getElementById("s3id");
+b3.play();
+co=0;
+
+ var um = 16;
+
+ setInterval(step, 8000)
+ 
+ i=0;
+
+ 
+ig = document.getElementById("imgId")
+
+ function step() {
+
+document.getElementById("tid").style.display="block" ;
+ti=document.getElementById("tid");
+
+
+
+
+
+  um++;
+if (um==1) {ti.innerHTML="日本 大阪";}
+if (um==2) {ti.innerHTML="南韓 首爾";}
+if (um==3) {ti.innerHTML="英國 倫敦";}
+if (um==4) {ti.innerHTML="新 加 坡";}
+if (um==5) {ti.innerHTML="美國 紐約";}
+if (um==6) {ti.innerHTML="美國 紐約";}
+if (um==7) {ti.innerHTML="美國 舊金山";}
+if (um==8) {ti.innerHTML="美國 芝加哥";}
+if (um==9) {ti.innerHTML="美國  紐約";}
+if (um==10) {ti.innerHTML="日本 東 京";}
+if (um==11) {ti.innerHTML="美國 紐約";}
+if (um==12) {ti.innerHTML="美國 芝加哥";}
+if (um==13) {ti.innerHTML="台 北";}
+if (um==14) {ti.innerHTML="美國 華盛頓";}
+if (um==15) {ti.innerHTML="美國 舊金山";}
+if (um==16) {ti.innerHTML="美國 洛山機";}
+if (um==17) {ti.innerHTML="日本 橫濱";}
+if (um==18) {ti.innerHTML="日本 神戶";}
+if (um==19) {ti.innerHTML="荷蘭 阿姆斯特丹";}
+if (um==20) {ti.innerHTML="澳洲 雪梨";}
+if (um==21) {ti.innerHTML="馬來西亞 吉隆坡";}
+if (um==22) {ti.innerHTML="加拿大 多倫多";}
+if (um==23) {ti.innerHTML="法國 巴黎";}
+if (um==24) {ti.innerHTML="紐西蘭 北島";}
+if (um==25) {ti.innerHTML="澳洲 墨而本";}
+if (um==26) {ti.innerHTML="德國 法蘭克福";}
+
+
+ i=-3000;
+ j=1;
+document.getElementById("imgId").style.display="none" ;
+ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+ 
+ig.onload = function(){  }
+ig.onerror =function(){
+um=1;
+if (um==1) {ti.innerHTML="日本 大阪";}
+ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
+}
+}
+
+ cl=setInterval(opac,30);
+
+function opac() {
+document.getElementById("imgId").style.display="block" ;
+i=i+20;
+
+ig.style.left=i+"px";
+if (i>-100)  {i=-100;
+
+}
+
+
+}
+
+
+}
+
+</script>
+
+<style type="text/css">
+.back{
+position:fixed;
+top:0;
+left:-1350px;
+
+height: 1800px;
+
+}
+
+
+.soapcl{
+position:fixed;
+top:0;
+left:-550px;
+height: 1800px;
+}
+
+
+
+
+
+
+
+.acl{
+position:fixed;
+top:0;
+left:-100px;
+height: 1800px;
+}
+
+.bcl{
+position:fixed;
+top:0;
+left:-1800px;
+height: 1800px;
+}
+
+.ccl{
+position:fixed;
+top:0;
+left:-2000px;
+height: 1800px;
+}
+
+.dcl{
+position:fixed;
+top:0;
+left:-100px;
+height: 1800px;
+}
+
+
+
+
+
+
+
+
+
+
+.tcl{
+font-weight:bold;
+position:fixed;
+top: 30px;
+font-size:100px;
+left:380px;
+color:white;
+background:red;
+font-weight:bold;
+border:none;
+border-radius:20px;
+padding: 10px 20px;
+}
+
+.imgcl{
+position:fixed;
+top: 0px;
+// left:-100px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<div  id="soapid" style="display:none;">
+<video class="soapcl" autoplay loop muted>
+<source src="sea.mp4">
+</video>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="photo/"+"1 (1).jpg" height="1800"  id="imgId" class="imgcl" style="display:none"/>  
+
+
+<audio id="s3id" src="cutes.mp4" loop controls="controls" hidden="true"></audio>
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+
+
+
+
+<dvi  class="tcl" id="tid" style="display:none;"  >
+<div></div>
+</dvi>
+
+
+
+
+
+</body>
+</html>
