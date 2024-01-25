@@ -14,9 +14,9 @@ b3=document.getElementById("s3id");
 b3.play();
 co=0;
 
- var um = 26;
+ var um = 35;
 
- setInterval(step, 8000)
+ setInterval(step, 9000)
  
  i=0;
 
@@ -74,8 +74,15 @@ if (um==38) {ti.innerHTML="埃及 金字塔";}
 if (um==39) {ti.innerHTML="泰國 曼谷";}
 if (um==40) {ti.innerHTML="復 活 島";}
 if (um==41) {ti.innerHTML="台北 大巨蛋";}
+if (um==42) {ti.innerHTML="日本 名古屋";}
+if (um==43) {ti.innerHTML="西 班 牙";}
+if (um==44) {ti.innerHTML="南非 約翰尼斯堡";}
+if (um==45) {ti.innerHTML="挪 威";}
+if (um==46) {ti.innerHTML="菲律賓 馬尼拉";}
  i=-3000;
+ww=20;
  j=1;
+tt=0;
 document.getElementById("imgId").style.display="none" ;
 ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
  
@@ -91,12 +98,11 @@ ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
 
 function opac() {
 document.getElementById("imgId").style.display="block" ;
-i=i+20;
-
+tt=tt+1;
+i=i+20-ww;
+if (tt>80)  {ww=0;}
 ig.style.left=i+"px";
-if (i>-100)  {i=-100;
-
-}
+if (i>-100)  {i=-100;}
 
 
 }
