@@ -16,7 +16,7 @@ co=0;
 
  var um = 35;
 
- setInterval(step, 9000)
+ setInterval(step, 8000)
  
  i=0;
 
@@ -80,9 +80,9 @@ if (um==44) {ti.innerHTML="南非 約翰尼斯堡";}
 if (um==45) {ti.innerHTML="挪 威";}
 if (um==46) {ti.innerHTML="菲律賓 馬尼拉";}
  i=-3000;
-ww=20;
+
  j=1;
-tt=0;
+
 document.getElementById("imgId").style.display="none" ;
 ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
  
@@ -98,9 +98,7 @@ ig.src =document.getElementById("imgId").src="photo/"+'1 ('+ um + ').jpg';
 
 function opac() {
 document.getElementById("imgId").style.display="block" ;
-tt=tt+1;
-i=i+20-ww;
-if (tt>80)  {ww=0;}
+i=i+20;
 ig.style.left=i+"px";
 if (i>-100)  {i=-100;}
 
