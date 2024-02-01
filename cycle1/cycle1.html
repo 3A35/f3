@@ -11,7 +11,7 @@ document.getElementById("in").style.display="none" ;
 
 document.getElementById("vid").style.display="block" ;
 document.getElementById("snowid").style.display="block" ; 
-document.getElementById("tid").style.display="block" ;
+// document.getElementById("tid").style.display="block" ;
 tt=document.getElementById("tid") ;
 ly1=document.getElementById("lyrics1id");
 ly2=document.getElementById("lyrics2id");
@@ -23,10 +23,10 @@ ly2.style.display="block";
  b1.play();
  setInterval(step, 13000);
 
- var um = 5;
+ var um = 13;
 vv = document.querySelector('.vcl');
-tt.innerHTML="人氣指數 第5名";
-vv.style.left="-1000px";
+tt.innerHTML="人氣指數 第8名";
+vv.style.left="-1200px";
 
 setInterval(step1, 1000);
  function step1() {
@@ -130,13 +130,16 @@ ly2.innerHTML="";
 
   um--; 
  tt.innerHTML="人氣指數 第"+um+"名";
-if (um==5) {vv.style.left="-1000px";}
+if (um==8) {vv.style.left="-1200px";}
+if (um==7) {vv.style.left="-1200px";}
+if (um==6) {vv.style.left="-1200px";}
+if (um==5) {vv.style.left="-1200px";}
 if (um==4) {vv.style.left="-1200px";}
-if (um==3) {vv.style.left="-1300px";}
-if (um==2) {vv.style.left="-1400px";}
-if (um==1) {vv.style.left="-1400px";}
+if (um==3) {vv.style.left="-1200px";}
+if (um==2) {vv.style.left="-1200px";}
+if (um==1) {vv.style.left="-1200px";}
 vv.src="v/"+'1 ('+ um + ').mp4';
-if (um==1) {um=6;}
+if (um==1) {um=14;}
 }
 }
 
@@ -239,7 +242,7 @@ text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
 
 <div  id="vid" style="display:none;">
 <video class="vcl" autoplay loop muted>
-<source src="v/1 (5).mp4">
+<source src="v/1 (13).mp4">
 </video>
 </div>
 
