@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+<title>  </title>
+<meta charset="utf-8">
+<script language="javascript">
+function pr() {
+   answer=0;
+    wrong=0;
+
+document.getElementById("meid").style.display="none";
+ id1= document.getElementById('id1');
+  va1 = id1.value;
+
+ if(va1=="y3"){ f1="第一題:答對";
+  answer++;
+  
+document.getElementById("t1").innerHTML="答對了 有紅包";
+document.getElementById("pid").style.display="block";
+suid.play();
+}
+else {f1="第一題:答錯";
+wrong++;
+document.getElementById("t1").innerHTML="答錯了 沒紅包";
+document.getElementById("pid1").style.display="block";
+faid.play();
+}
+
+
+} 
+</script>
+
+<style type="text/css">
+.container {
+position:fixed;
+
+top:200px;
+  font-size:80px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+#bu {
+font-size:80px;
+}
+
+#id1 {
+font-size:80px;
+}
+#t1 {
+position:fixed;
+top:1200px;
+left:200px;
+font-size:80px;
+color:green;
+}
+
+
+
+
+#pid {
+position:fixed;
+top:300px;
+}
+
+#pid1 {
+position:fixed;
+top:300px;
+}
+
+</style>
+</head>
+<body>
+<div id="meid" class="container"  >
+  <form >
+    <label for="st1">請問今年是什麼年?</label>
+    <select id="id1" name="st1">
+      <option value="y1">兔年</option>
+      <option value="y2">鼠年</option>
+      <option value="y3">龍年</option>
+      <option value="y4">牛年</option>
+      <option value="y5">豬年</option>
+      <option value="y6">猴年</option>
+    </select> 
+ <input type="button" id="bu" value="送出" onclick="pr();">
+  </form>
+  </div>
+
+<div id="t1"  ></div>
+
+<div id="pid"  class="pcl" style="display:none;">
+<img  src="yes.jpg" width="900" />
+</div>
+
+<div id="pid1"  class="pcl1" style="display:none;">
+<img  src="no.jpg" width="900" />
+</div>
+
+
+<div   id="backid" class="backcl"  style="display:none;" >
+<INPUT TYPE="button" VALUE="重新開始" onClick="pr();">
+</div>
+
+<audio id="suid" src="success.mp4"  controls="controls" hidden="true"></audio>
+
+<audio id="faid" src="fail.mp4"  controls="controls" hidden="true"></audio>
+
+
+
+</body>
+</html>
