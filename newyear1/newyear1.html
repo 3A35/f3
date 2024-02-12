@@ -5,7 +5,10 @@
 <script type="text/javascript">
 
  function sho(){
-
+document.getElementById("ph1").innerHTML="祝你 新年快樂";
+document.getElementById("ph2").innerHTML="龍年 行大運"; 
+document.getElementById("ph3").innerHTML="財源 廣進";
+document.getElementById("ph4").innerHTML="紅包拿來";
 document.getElementById("vid").style.display="block" ;
 
 document.getElementById("in").style.display="none";
@@ -44,6 +47,7 @@ kkk++;
 
  if (yyy==845) { 
 clearInterval(clo1);
+setTimeout(sho1,3000);
 }
  else { 
  fff.style.top=yyy+"px";
@@ -104,13 +108,43 @@ var ii=1
 if(ii==6) {ii=1;}
 
 }
+}
+
+ function sho1(){
+var clo3=setInterval(ep3,5);
+var le=100;
+var um=0;
+fff=document.getElementById("tid"); 
+ function ep3(){
+le--
+um++
+ fff.style.left=le+"px";
+
+if (um==1200) {le=1000;
+document.getElementById("ph1").innerHTML="欣欣向龍";
+  document.getElementById("ph2").innerHTML="生意興龍"; 
+ document.getElementById("ph3").innerHTML="龍華富貴";
+  document.getElementById("ph4").innerHTML="龍圖大展";
+}
+
+if (um==3000) {le=1000;
+document.getElementById("ph1").innerHTML="龍騰虎躍";
+  document.getElementById("ph2").innerHTML="祥龍獻瑞"; 
+ document.getElementById("ph3").innerHTML="魚躍龍門";
+  document.getElementById("ph4").innerHTML="天天龍有錢";
+}
+
+if (um==5000) {
+clearInterval(clo3);
+ 
+// var  clo2=setInterval(ep2, 500);
+// clearInterval(clo1);
+setTimeout(sho,2000);
+}
 
 
 
-
-
-
-
+}
 }
 </script>
 
@@ -163,8 +197,24 @@ height: 1920px;
 <br>
 <div  id="ph4" style="color:red;font-weight:bold;">紅包拿來</div>
                
-
 </div>
+
+
+<div  class="ttt"  id="t1id" style="display:none;">
+
+<div id="ph1" style="color:red;font-weight:bold;" >祝你 新年快樂</div>
+<br>  
+<div id="ph2" style="color:red;font-weight:bold;">龍年 行大運</div>
+<br>
+<div  id="ph3" style="color:red;font-weight:bold;">財源 廣進</div>
+<br>
+<div  id="ph4" style="color:red;font-weight:bold;">紅包拿來</div>
+               
+</div>
+
+
+
+
 
 <div id="in"    >
 <input type="image" src="in.jpg"  width="1500"  height="1920"  onClick="sho()">
