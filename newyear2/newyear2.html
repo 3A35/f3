@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<head>
+<title>2024 new year  </title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function sho(){
+document.getElementById("ph1").innerHTML="祝你 新年快樂";
+document.getElementById("ph2").innerHTML="龍年 行大運"; 
+document.getElementById("ph3").innerHTML="財源 廣進";
+document.getElementById("ph4").innerHTML="大吉大利";
+
+document.getElementById("vid").style.display="block" ;
+
+document.getElementById("in").style.display="none";
+document.getElementById("tid").style.display="block";
+
+ b1=document.getElementById("b1");
+ 
+ b1.play();
+
+var fff;
+var si;
+
+fff=document.getElementById("tid"); 
+si1=document.getElementById("ph1"); 
+si2=document.getElementById("ph2"); 
+si3=document.getElementById("ph3"); 
+si4=document.getElementById("ph4"); 
+
+
+
+
+var clo1=setInterval(ep1,5);
+var le=1000;
+var um=0;
+
+ function ep1(){
+le--
+um++
+ fff.style.left=le+"px";
+if (um==2000) {le=1000;
+document.getElementById("ph1").innerHTML="欣欣向龍";
+  document.getElementById("ph2").innerHTML="生意興龍"; 
+ document.getElementById("ph3").innerHTML="龍華富貴";
+  document.getElementById("ph4").innerHTML="龍圖大展";
+}
+
+if (um==4000) {le=1000;
+document.getElementById("ph1").innerHTML="龍騰虎躍";
+  document.getElementById("ph2").innerHTML="祥龍獻瑞"; 
+ document.getElementById("ph3").innerHTML="魚躍龍門";
+  document.getElementById("ph4").innerHTML="天天龍有錢";
+}
+
+
+if (um==6000) {le=1000;
+document.getElementById("ph1").innerHTML="恭喜發財";
+  document.getElementById("ph2").innerHTML="恭賀新喜"; 
+ document.getElementById("ph3").innerHTML="心想事成";
+  document.getElementById("ph4").innerHTML="闔家平安";
+}
+
+if (um==8000) {
+clearInterval(clo1);
+clearInterval(clo2);
+setTimeout(sho,1000);
+}
+
+}
+
+ var  clo2=setInterval(ep2, 500);
+var ii=1
+ function ep2() {
+ if(ii==1){
+  document.getElementById("ph1").style.color="yellow";
+  document.getElementById("ph2").style.color="yellow"; 
+  document.getElementById("ph3").style.color="yellow";
+  document.getElementById("ph4").style.color="yellow";
+   
+ }
+ if(ii==2){
+  document.getElementById("ph1").style.color="silver";
+  document.getElementById("ph2").style.color="silver"; 
+ document.getElementById("ph3").style.color="silver";
+ document.getElementById("ph4").style.color="silver";
+
+}  
+
+ if(ii==3){
+  document.getElementById("ph1").style.color="orange";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="orange";
+ document.getElementById("ph4").style.color="orange";
+}   
+     
+
+ if(ii==4){
+  document.getElementById("ph1").style.color="white";
+  document.getElementById("ph2").style.color="white"; 
+ document.getElementById("ph3").style.color="white";
+ document.getElementById("ph4").style.color="white";
+}   
+
+ if(ii==5){
+  document.getElementById("ph1").style.color="orange";
+  document.getElementById("ph2").style.color="orange"; 
+ document.getElementById("ph3").style.color="orange";
+  document.getElementById("ph4").style.color="orange";
+ 
+}  
+
+
+
+ ii++;
+if(ii==6) {ii=1;}
+
+}
+
+
+}
+</script>
+
+<style type="text/css">
+
+ .ttt{
+position: fixed;
+  top: 1000px;
+  left: 280px;
+font-size:120px;
+ white-space: nowrap; 
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+
+
+
+.vcl{
+position:fixed;
+top:-150px;
+left:-900px;
+height: 1920px;
+}
+
+
+#in {
+position:fixed;
+top:0px;
+left:-250px;
+height: 1920px;
+}
+
+
+
+</style>
+</head>
+<body>
+<div  id="vid" style="display:none;">
+<video class="vcl" autoplay loop muted>
+<source src="sea.mp4">
+</video>
+</div>
+
+
+
+<div  class="ttt"  id="tid" style="display:none;">
+
+<div id="ph1" style="color:red;font-weight:bold;" >祝你 新年快樂</div>
+  
+<div id="ph2" style="color:red;font-weight:bold;">龍年 行大運</div>
+
+<div  id="ph3" style="color:red;font-weight:bold;">財源 廣進</div>
+
+<div  id="ph4" style="color:red;font-weight:bold;">紅包拿來</div>
+               
+</div>
+
+
+
+
+
+
+
+<div id="in"    >
+<input type="image" src="in.jpg"  width="1500"  height="1920"  onClick="sho()">
+</div>
+
+
+
+<audio id="b1" src="new.mp4" loop controls="controls" hidden="true"></audio>
+
+
+</body>
+</html>
