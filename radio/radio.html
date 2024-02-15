@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Document</title>
+
+<script language="javascript">
+var right=0;
+var wrong=0;
+var um=0;
+function pr1() {
+ if (a14.checked==true ) {alert("答對了"); right++;}
+else {alert("答錯了");wrong++;}
+document.getElementById("all1id").style.display="none" ;
+document.getElementById("all2id").style.display="block" ;
+} 
+
+function pr2() {
+ 
+
+
+ if (a23.checked==true ) {alert("答對了"); right++;}
+ else {alert("答錯了");wrong++;}
+
+document.getElementById("all1id").style.display="none" ;
+document.getElementById("all2id").style.display="none" ;
+
+
+ alert ("總共答對"+right+"題");
+ alert ("錯"+wrong+"題");
+}
+
+
+
+
+
+</script>
+
+	<style>
+	#t1id{
+position:fixed;
+top: 250px;
+left:120px;
+color: green;
+font-size:120px;
+	}
+
+    #t2id{
+position:fixed;
+top: 400px;
+left:120px;
+width:900px;
+ font-size:90px;
+}
+
+#allid{
+position:fixed;
+top: 1000px;
+left:150px;
+font-size:80px;
+}
+
+
+
+
+
+
+.bucl{
+position:fixed;
+top: 1500px;
+left:350px;
+font-size:80px;
+}
+
+	</style>
+</head>
+
+<body>
+         <div id="all1id" >
+	<div id="t1id" >
+	機智問答
+	</div>
+	<div id="t2id">請問下列哪一種動物身上沒有肚臍？</div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a11" style="zoom:4;" name="brand" >
+		<label  >海豚</label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a12" style="zoom:4;" name="brand"  >
+		<label >狗</label>
+	</div>
+
+	<div>
+		<input type="radio" id="a13" style="zoom:4;" name="brand"  >
+		<label>象</label>
+	</div>
+
+        <div>
+		<input type="radio" id="a14" style="zoom:4;" name="brand"  checked>
+		<label>龜</label>
+ 
+	</div>
+
+        </div>
+ <input id="bu1id" class="bucl"  type="button" value="送出" onclick="pr1();">
+ </div>
+ </div>
+
+         <div id="all2id"  style="display:none;">
+	<div id="t1id" >
+	機智問答
+	</div>
+	<div id="t2id">有些動物的外表顏色與環境相似，甚至可以隨環境改變自己的體色，這種現象稱為?</div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a21" style="zoom:4;" name="brand" >
+		<label  >模擬色</label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a22" style="zoom:4;" name="brand"  >
+		<label >武裝色</label>
+	</div>
+
+	<div>
+		<input type="radio" id="a23" style="zoom:4;" name="brand"  >
+		<label >保護色</label>
+	</div>
+
+        <div>
+		<input type="radio" id="a24" style="zoom:4;" name="brand"  checked>
+		<label >見聞色</label>
+      <input id="bu2id" class="bucl" type="button" value="送出" onclick="pr2();">
+	</div>
+
+        </div>
+
+ </div>
+ </div>
+
+</body>
+
+</html>
