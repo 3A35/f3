@@ -2,35 +2,96 @@
 <html lang="en">
 
 <head>
-	<title>Document</title>
+	<title></title>
 
 <script language="javascript">
 var right=0;
 var wrong=0;
 var um=0;
 function pr1() {
- if (a14.checked==true ) {alert("答對了"); right++;}
-else {alert("答錯了");wrong++;}
-document.getElementById("all1id").style.display="none" ;
-document.getElementById("all2id").style.display="block" ;
+document.getElementById("all1id").style.display="none"; 
+ if (a14.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all2id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+  setTimeout('document.getElementById("wrongid").innerHTML="";',2000 ); 
 } 
 
 function pr2() {
- 
+
+document.getElementById("all2id").style.display="none"; 
+ if (a23.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all3id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
 
 
- if (a23.checked==true ) {alert("答對了"); right++;}
- else {alert("答錯了");wrong++;}
 
-document.getElementById("all1id").style.display="none" ;
-document.getElementById("all2id").style.display="none" ;
-
-
- alert ("總共答對"+right+"題");
- alert ("錯"+wrong+"題");
+// alert ("總共答對"+right+"題");
+// alert ("錯"+wrong+"題");
 }
 
 
+function pr3() {
+
+document.getElementById("all3id").style.display="none"; 
+ if (a34.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all4id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+
+
+
+// alert ("總共答對"+right+"題");
+// alert ("錯"+wrong+"題");
+}
+
+
+
+function pr4() {
+
+document.getElementById("all4id").style.display="none"; 
+ if (a43.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+// setTimeout('document.getElementById("all4id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+
+
+setTimeout('document.getElementById("rightid").innerHTML="總共答對"+right+"題";',3000 ); 
+setTimeout('document.getElementById("wrongid").innerHTML="錯"+wrong+"題";',3000 ); 
+// setTimeout('alert ("總共答對"+right+"題");',3000 ); 
+// setTimeout('alert ("錯"+wrong+"題");',3000 );
+setTimeout('document.getElementById("tfractionid").innerHTML="你的智商="+right*50;',3000 ); 
+
+
+}
 
 
 
@@ -39,21 +100,37 @@ document.getElementById("all2id").style.display="none" ;
 	<style>
 #t1id{
 position:fixed;
-top: 100px;
+top: 50px;
 left:50px;
+color: silver;
+font-size:120px;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+	}
+
+#tfractionid{
+position:fixed;
+top: 1100px;
+left:150px;
 color: green;
 font-size:120px;
 font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
 	}
+
 
     #t2id{
 position:fixed;
 top: 350px;
 left:50px;
-color:brown;
-width:950px;
+color:blue;
+width:900px;
  font-size:80px;
 font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
 }
 
 #allid{
@@ -77,14 +154,54 @@ color:white;
 font-size:80px;
 font-weight:bold;
 background-color:red;
+border-radius:20px;
+padding: 10px 20px;
+border:none;
 }
 
-	</style>
+.backcl{
+position:fixed;
+top: 0px;
+left:0px;
+
+}
+
+.rightcl{
+position:fixed;
+top: 700px;
+left:350px;
+color:white;
+font-size:80px;
+font-weight:bold;
+background-color:red;
+border-radius:20px;
+
+}
+
+.wrongcl{
+position:fixed;
+top: 900px;
+left:350px;
+color:white;
+font-size:80px;
+font-weight:bold;
+background-color:brown;
+border-radius:20px;
+
+}
+
+</style>
 </head>
 
 <body>
 
-<div id="t1id" >機智問答</div>
+<img src="back.jpg" width="1080" height="1920" id="backid" class="backcl"/>  
+
+<div id="t1id" >智力測驗</div>
+<div id="tfractionid" ></div>
+
+<div id="rightid" class="rightcl" ></div>
+<div id="wrongid" class="wrongcl"></div>
 
 
          <div id="all1id" >
@@ -93,28 +210,26 @@ background-color:red;
         <div id="allid">
 	<div>
          
-		<input type="radio" id="a11" style="zoom:4;" name="brand" >
+		<input type="radio" id="a11" style="zoom:4;" name="n1" >
 		<label  >海豚</label>
 	</div>
   
 	<div>
-		<input type="radio" id="a12" style="zoom:4;" name="brand"  >
+		<input type="radio" id="a12" style="zoom:4;" name="n1"  >
 		<label >狗</label>
 	</div>
 
 	<div>
-		<input type="radio" id="a13" style="zoom:4;" name="brand"  >
+		<input type="radio" id="a13" style="zoom:4;" name="n1"  >
 		<label>象</label>
 	</div>
 
         <div>
-		<input type="radio" id="a14" style="zoom:4;" name="brand"  checked>
+		<input type="radio" id="a14" style="zoom:4;" name="n1"  checked>
 		<label>龜</label>
- 
-	</div>
-
-        </div>
+        
  <input id="bu1id" class="bucl"  type="button" value="送出" onclick="pr1();">
+ </div>
  </div>
  </div>
 
@@ -124,31 +239,88 @@ background-color:red;
         <div id="allid">
 	<div>
          
-		<input type="radio" id="a21" style="zoom:4;" name="brand" >
+		<input type="radio" id="a21" style="zoom:4;" name="n2" >
 		<label  >模擬色</label>
 	</div>
   
 	<div>
-		<input type="radio" id="a22" style="zoom:4;" name="brand"  >
+		<input type="radio" id="a22" style="zoom:4;" name="n2"  >
 		<label >武裝色</label>
 	</div>
 
 	<div>
-		<input type="radio" id="a23" style="zoom:4;" name="brand"  >
+		<input type="radio" id="a23" style="zoom:4;" name="n2"  >
 		<label >保護色</label>
 	</div>
 
         <div>
-		<input type="radio" id="a24" style="zoom:4;" name="brand"  checked>
+		<input type="radio" id="a24" style="zoom:4;" name="n2" checked >
 		<label >見聞色</label>
       <input id="bu2id" class="bucl" type="button" value="送出" onclick="pr2();">
 	</div>
-
+        </div>
         </div>
 
- </div>
- </div>
+  <div id="all3id"  style="display:none;">
+	
+	<div id="t2id">以下哪一種動物會群聚在一起生活，並分工合作？</div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a31" style="zoom:4;" name="n3" >
+		<label  >野牛</label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a32" style="zoom:4;" name="n3"  >
+		<label >白兔</label>
+	</div>
 
+	<div>
+		<input type="radio" id="a33" style="zoom:4;" name="n3"  >
+		<label >螢火蟲</label>
+	</div>
+
+        <div>
+		<input type="radio" id="a34" style="zoom:4;" name="n3"  checked>
+		<label >蜜蜂</label>
+      <input id="bu3id" class="bucl" type="button" value="送出" onclick="pr3();">
+	</div>
+        </div>
+         </div>
+
+ <div id="all4id"  style="display:none;">
+	
+	<div id="t2id">螞蟻是社會性的動物，以下對於螞蟻的敘述何者錯誤？</div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a41" style="zoom:4;" name="n4" >
+		<label  >兵蟻負責保護蟻巢 </label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a42" style="zoom:4;" name="n4"  >
+		<label >工蟻負責尋找食物</label>
+	</div>
+
+	<div>
+		<input type="radio" id="a43" style="zoom:4;" name="n4"  >
+		<label >蟻后負責餵養幼蟲 </label>
+	</div>
+
+        <div>
+		<input type="radio" id="a44" style="zoom:4;" name="n4"  checked>
+		<label >雄蟻負責交配</label>
+      <input id="bu4id" class="bucl" type="button" value="送出" onclick="pr4();">
+	</div>
+        </div>
+         </div>
 </body>
 
 </html>
+
+
+
+
+
