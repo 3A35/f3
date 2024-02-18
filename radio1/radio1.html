@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+
+<script language="javascript">
+var right=0;
+var wrong=0;
+var um=0;
+
+t1="以下哪一組適合用來作為動物分類的標準？";
+t11="食量大、食量小 ";
+t12="有腳、沒有腳";
+t13="漂亮、不漂亮";
+t14="體型大、體型小";
+
+t2="下列哪一種動物的主要運動方式和其他三種不同？ ";
+t21="袋鼠 ";
+t22="黃牛 ";
+t23="腹斑蛙";
+t24="兔子";
+
+t3="以下「動物-食用的食物」的配對何者正確？";
+t31="蜂鳥-小魚";
+t32="草蜥-樹葉";
+t33="鯨鯊-小企鵝 ";
+t34="人面蜘蛛-蝴蝶";
+
+t4="下列哪一項敘述正確？ ";
+t41="小狗利用喘氣和吐舌來散熱 ";
+t42="烏龜會聚在一起取暖，維持體溫";
+t43="蛇會利用厚厚的皮下脂肪禦寒 ";
+t44="雞和鴨利用休眠過冬";
+
+t5="下列動物與主要運動部位的配對何者正確？ ";
+t51="烏鴉-翅膀 ";
+t52="蚯蚓-腹足 ";
+t53="蛇-體節  ";
+t54="袋鼠-前腳";
+
+onload=function (){
+document.getElementById("t1id").innerHTML=t1;
+document.getElementById("la11").innerHTML=t11;
+document.getElementById("la12").innerHTML=t12;
+document.getElementById("la13").innerHTML=t13;
+document.getElementById("la14").innerHTML=t14;
+
+document.getElementById("t2id").innerHTML=t2;
+document.getElementById("la21").innerHTML=t21;
+document.getElementById("la22").innerHTML=t22;
+document.getElementById("la23").innerHTML=t23;
+document.getElementById("la24").innerHTML=t24;
+
+document.getElementById("t3id").innerHTML=t3;
+document.getElementById("la31").innerHTML=t31;
+document.getElementById("la32").innerHTML=t32;
+document.getElementById("la33").innerHTML=t33;
+document.getElementById("la34").innerHTML=t34;
+
+document.getElementById("t4id").innerHTML=t4;
+document.getElementById("la41").innerHTML=t41;
+document.getElementById("la42").innerHTML=t42;
+document.getElementById("la43").innerHTML=t43;
+document.getElementById("la44").innerHTML=t44;
+
+document.getElementById("t5id").innerHTML=t5;
+document.getElementById("la51").innerHTML=t51;
+document.getElementById("la52").innerHTML=t52;
+document.getElementById("la53").innerHTML=t53;
+document.getElementById("la54").innerHTML=t54;
+
+}
+function pr1() {
+
+document.getElementById("all1id").style.display="none"; 
+ if (a12.checked==true) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all2id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+  setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+setTimeout('document.getElementById("t2id").innerHTML=t2;',2000 ); 
+} 
+
+function pr2() {
+
+document.getElementById("all2id").style.display="none"; 
+
+ if (a22.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all3id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+ setTimeout('document.getElementById("t3id").innerHTML=t3;',2000 ); 
+}
+
+
+function pr3() {
+
+document.getElementById("all3id").style.display="none"; 
+ if (a34.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all4id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+ setTimeout('document.getElementById("t4id").innerHTML=t4;',2000 ); 
+}
+
+
+function pr4() {
+
+document.getElementById("all4id").style.display="none"; 
+ if (a41.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all5id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+ setTimeout('document.getElementById("t5id").innerHTML=t5;',2000 ); 
+}
+
+
+
+function pr5() {
+
+document.getElementById("all5id").style.display="none"; 
+ if (a51.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+
+ setTimeout('document.getElementById("rightid").innerHTML="";',1500 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',1500 );
+
+sum=right*20;
+setTimeout('document.getElementById("rightid").innerHTML="總共答對"+right+"題";',2000 ); 
+setTimeout('document.getElementById("wrongid").innerHTML="錯"+wrong+"題";',2000 ); 
+setTimeout('document.getElementById("tfractionid").innerHTML=sum+"分";',2000 ); 
+
+if (sum==0) {setTimeout('document.getElementById("tendid").innerHTML="只有 幼稚園程度";',2000 ); }
+if (sum==20) {setTimeout('document.getElementById("tendid").innerHTML="只有 國小程度";',2000 ); }
+if (sum==40) {setTimeout('document.getElementById("tendid").innerHTML="只有 國中程度";',2000 ); }
+if (sum==60) {setTimeout('document.getElementById("tendid").innerHTML="高 中 程 度";',2000 ); }
+if (sum==80) {setTimeout('document.getElementById("tendid").innerHTML="大 學 程 度";',2000 ); }
+if (sum==100) {setTimeout('document.getElementById("tendid").innerHTML="博士等級的天才";',2000 ); }
+}
+
+
+</script>
+
+	<style>
+#tmid{
+position:fixed;
+top: 50px;
+left:50px;
+color: green;
+font-size:120px;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+	}
+
+#tfractionid{
+position:fixed;
+top: 1100px;
+left:250px;
+color: green;
+font-size:120px;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+	}
+
+
+    .t1cl{
+position:fixed;
+top: 300px;
+left:50px;
+color:blue;
+width:900px;
+ font-size:80px;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+}
+
+#allid{
+position:fixed;
+top: 800px;
+left:50px;
+font-size:65px;
+font-weight:bold;
+width:900px;
+}
+
+
+
+
+
+
+.bucl{
+position:fixed;
+top: 1400px;
+left:350px;
+color:white;
+font-size:80px;
+font-weight:bold;
+background-color:red;
+border-radius:20px;
+padding: 10px 20px;
+border:none;
+}
+
+.backcl{
+position:fixed;
+top: 0px;
+left:0px;
+
+}
+
+.rightcl{
+position:fixed;
+top: 700px;
+left:300px;
+color:white;
+font-size:80px;
+font-weight:bold;
+background-color:red;
+border-radius:20px;
+
+}
+
+.wrongcl{
+position:fixed;
+top: 900px;
+left:300px;
+color:white;
+font-size:80px;
+font-weight:bold;
+background-color:brown;
+border-radius:20px;
+
+}
+
+
+#tendid{
+position:fixed;
+top: 1300px;
+left:100px;
+color:brown;
+font-size:100px;
+font-weight:bold;
+animation:blink 1s infinite;
+// animation-delay: 2s  ;
+}
+
+@keyframes blink {
+ 0%{opacity:1;}
+ 50%{opacity:0;}
+ 100%{opacity:1;}
+}
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<img src="back.jpg" width="1080" height="1920" id="backid" class="backcl"/>  
+
+<div id="tmid" >智力測驗</div>
+<div id="tfractionid" ></div>
+
+<div id="rightid" class="rightcl" ></div>
+<div id="wrongid" class="wrongcl"></div>
+<div id="tendid" ></div>
+
+         <div id="all1id" >
+	
+	<div id="t1id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a11" style="zoom:4;" name="n1" >
+		<label  id="la11" ></label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a12" style="zoom:4;" name="n1"  >
+		<label  id="la12"></label>
+	</div>
+
+	<div>
+		<input type="radio" id="a13" style="zoom:4;" name="n1"  >
+		<label  id="la13"></label>
+	</div>
+
+        <div>
+		<input type="radio" id="a14" style="zoom:4;" name="n1"  checked>
+		<label  id="la14"></label>
+        
+ <input id="bu1id" class="bucl"  type="button" value="送出" onclick="pr1();">
+ </div>
+ </div>
+ </div>
+
+         <div id="all2id"  style="display:none;">
+	
+	<div id="t2id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a21" style="zoom:4;" name="n2" >
+		<label id="la21" ></label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a22" style="zoom:4;" name="n2"  >
+		<label id="la22"></label>
+	</div>
+
+	<div>
+		<input type="radio" id="a23" style="zoom:4;" name="n2"  >
+		<label id="la23"></label>
+	</div>
+
+        <div>
+		<input type="radio" id="a24" style="zoom:4;" name="n2" checked >
+		<label id="la24"></label>
+      <input id="bu2id" class="bucl" type="button" value="送出" onclick="pr2();">
+	</div>
+        </div>
+        </div>
+
+  <div id="all3id"  style="display:none;">
+	
+	<div id="t3id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a31" style="zoom:4;" name="n3" >
+		<label id="la31" ></label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a32" style="zoom:4;" name="n3"  >
+		<label id="la32"></label>
+	</div>
+
+	<div>
+		<input type="radio" id="a33" style="zoom:4;" name="n3"  >
+		<label id="la33"></label>
+	</div>
+
+        <div>
+		<input type="radio" id="a34" style="zoom:4;" name="n3"  checked>
+		<label id="la34"></label>
+      <input id="bu3id" class="bucl" type="button" value="送出" onclick="pr3();">
+	</div>
+        </div>
+         </div>
+
+ <div id="all4id"  style="display:none;">
+	
+	<div id="t4id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a41" style="zoom:4;" name="n4" >
+		<label id="la41"  > </label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a42" style="zoom:4;" name="n4"  >
+		<label id="la42" ></label>
+	</div>
+
+	<div>
+		<input type="radio" id="a43" style="zoom:4;" name="n4"  >
+		<label id="la43" > </label>
+	</div>
+
+        <div>
+		<input type="radio" id="a44" style="zoom:4;" name="n4"  checked>
+		<label id="la44" ></label>
+      <input id="bu4id" class="bucl" type="button" value="送出" onclick="pr4();">
+	</div>
+        </div>
+         </div>
+
+
+ <div id="all5id"  style="display:none;">
+	
+	<div id="t5id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a51" style="zoom:4;" name="n5" >
+		<label  id="la51" >兵蟻負責保護蟻巢 </label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a52" style="zoom:4;" name="n5"  >
+		<label id="la52" >工蟻負責尋找食物</label>
+	</div>
+
+	<div>
+		<input type="radio" id="a53" style="zoom:4;" name="n5"  >
+		<label id="la53">蟻后負責餵養幼蟲 </label>
+	</div>
+
+        <div>
+		<input type="radio" id="a54" style="zoom:4;" name="n5"  checked>
+		<label id="la54" >雄蟻負責交配</label>
+      <input id="bu5id" class="bucl" type="button" value="送出" onclick="pr5();">
+	</div>
+        </div>
+         </div>
+</body>
+
+</html>
+
+
+
+
+
