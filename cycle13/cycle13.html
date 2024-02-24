@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<head>
+<title>你所愛的人</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function get(){
+k=37;
+g=84; 
+um=1;
+t1=20;
+document.getElementById("in").style.display="none" ;
+
+document.getElementById("vid").style.display="block" ;
+
+document.getElementById("tid").style.display="block" ;
+tt=document.getElementById("tid") ;
+
+ly1=document.getElementById("lyrics1id");
+ly2=document.getElementById("lyrics2id");
+ly1.style.display="block"; 
+ly2.style.display="block"; 
+ 
+ b1=document.getElementById("b1");
+ b1.currentTime = 0;
+ b1.play();
+ setInterval(step, 8000);
+
+
+vv = document.querySelector('.vcl');
+
+vv.style.left="-1200px";
+
+setInterval(step1, 1000);
+
+ function step1() {
+ti=Math.round(b1.currentTime);
+
+if(ti== 4+t1){ly1.innerHTML='I know you need a friend';ly2.innerHTML='我知道你需要一個朋友 ';}
+if(ti== 9+t1){ly1.innerHTML='Someone you can talk to';ly2.innerHTML='可以與你交談的人 ' ;}
+if(ti== 12+t1){ly1.innerHTML='Who will understand what you`re going through';ly2.innerHTML='誰會理解你正在經歷的事情 ' ;}
+if(ti== 18+t1){ly1.innerHTML='When it comes to love';ly2.innerHTML='當談到愛情時 ' ;}
+if(ti== 22+t1){ly1.innerHTML='There`s no easy answer';ly2.innerHTML='沒有簡單的答案 ' ;}
+if(ti== 26+t1){ly1.innerHTML='Only you can say what you`re gonna do';ly2.innerHTML='只有你才能說出你要做什麼 ';}
+if(ti== 35+t1){ly1.innerHTML='I heard you on the phone';ly2.innerHTML='我在電話裡聽到你的聲音 ' ;}
+if(ti== 39+t1){ly1.innerHTML='You took his number';ly2.innerHTML='你拿了他的號碼 ' ;}
+if(ti== 42+t1){ly1.innerHTML='Said you weren`t alone but you`d call him soon ';ly2.innerHTML='說你並不孤單 但你很快就會打電話給他 ' ;}
+if(ti== 47+t1){ly1.innerHTML='Isn`t he the guy';ly2.innerHTML='他不是那個人嗎 ';}
+if(ti== 51+t1){ly1.innerHTML='The guy who left you crying';ly2.innerHTML='那個讓你哭泣的人 ' ;}
+if(ti== 54+t1){ly1.innerHTML='Isn`t he the one who made you blue';ly2.innerHTML='他不是那個讓你臉色發青的人嗎？ ';}
+if(ti== 65+t1){ly1.innerHTML='When you remember those nights in his arms';ly2.innerHTML='當你想起那些在他懷裡度過的夜晚 ';}
+if(ti== 71+t1){ly1.innerHTML='You know you`ve gotta make up your mind';ly2.innerHTML='你知道你必須下定決心 ';}
+
+
+if(ti== 79+t1){ly1.innerHTML='Are you gonna stay with the one who loves you';ly2.innerHTML='你會留在愛你的人身邊嗎 ' ;}
+if(ti== 86+t1){ly1.innerHTML='Or are you going back to the one you love';ly2.innerHTML='或是你會回到你所愛的人身邊嗎 ' ;}
+if(ti== 92+t1){ly1.innerHTML='Someone`s gonna cry when they learn they`ve lost you';ly2.innerHTML='當有人知道失去你時，他們會哭泣 ';}
+if(ti== 99+t1){ly1.innerHTML='Someone`s gonna thank the stars above';ly2.innerHTML='有人會感謝上面的星星 ' ;}
+if(ti== 110+t1){ly1.innerHTML='';ly2.innerHTML=' ' ;}
+if(ti== 134+t1){ly1.innerHTML='What you gonna say when he comes over';ly2.innerHTML='當他過來你會說什麼 ';}
+if(ti== 141+t1){ly1.innerHTML='There`s no easy way to see this through';ly2.innerHTML='沒有簡單的方法可以解決這個問題 ' ;}
+if(ti== 147+t1){ly1.innerHTML='All the broken dreams';ly2.innerHTML='所有破碎的夢想 ' ;}
+if(ti== 150+t1){ly1.innerHTML='All the disappointments';ly2.innerHTML='所有的失望 ' ;}
+if(ti== 154+t1){ly1.innerHTML='Oh girl  what you gonna do';ly2.innerHTML='哦女孩，你要做什麼 ';}
+if(ti== 160+t1){ly1.innerHTML='';ly2.innerHTML=' ';}
+if(ti== 160+t1){ly1.innerHTML='Your heart keeps saying it`s just not fair';ly2.innerHTML='你的心一直在說這不公平 ';}
+if(ti== 168+t1){ly1.innerHTML='But still you`ve gotta make up your mind';ly2.innerHTML='但你還是得下定決心 ';}
+if(ti== 176+t1){ly1.innerHTML='Are you gonna stay with the one who loves you';ly2.innerHTML='你會留在愛你的人身邊嗎 ';}
+if(ti== 182+t1){ly1.innerHTML='Or are you going back to the one you love';ly2.innerHTML='或是你會回到你所愛的人身邊嗎 ' ;}
+if(ti== 187+t1){ly1.innerHTML='Someone`s gonna cry when they know they`ve lost you';ly2.innerHTML='當有人知道失去你時，他們會哭泣 ' ;}
+if(ti== 195+t1){ly1.innerHTML='Someone`s gonna thank the stars above';ly2.innerHTML='有人會感謝上面的星星 ';}
+if(ti== 205+t1){ly1.innerHTML='';ly2.innerHTML=' ' ;}
+if(ti== 210+t1){ly1.innerHTML='';ly2.innerHTML=' ' ;}
+
+if (ti==235+t1) {
+
+ b1.currentTime = 0;
+ ti==0;
+}
+
+}
+
+ function step() {
+um++; 
+// tt.innerHTML=um;
+if (um==1) {vv.style.left="-1200px";
+vv.style.top="0px";
+}
+if (um==2) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==3) {vv.style.left="-1200px";
+
+}
+
+if (um==4) {vv.style.left="-1200px";
+vv.style.top="0px";
+}
+if (um==5) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==6) {vv.style.left="-1200px";
+
+}
+
+if (um==7) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==8) {vv.style.left="-1200px";
+
+}
+
+if (um==9) {vv.style.left="-1200px";
+
+}
+
+if (um==10) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==11) {vv.style.left="-1200px";
+}
+
+
+if (um==12) {vv.style.left="-1200px";
+
+}
+
+if (um==13) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==14) {vv.style.left="-1200px";
+
+}
+
+if (um==15) {vv.style.left="-1200px";
+vv.style.top="0px";
+}
+if (um==16) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==17) {vv.style.left="-1200px";
+
+}
+
+if (um==18) {vv.style.left="-1200px";
+vv.style.top="0px";
+}
+if (um==19) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==20) {vv.style.left="-1200px";
+
+}
+
+if (um==21) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==22) {vv.style.left="-1200px";
+
+}
+
+if (um==23) {vv.style.left="-1200px";
+
+}
+
+if (um==24) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==25) {vv.style.left="-1200px";
+}
+
+
+if (um==26) {vv.style.left="-1200px";
+
+}
+
+if (um==27) {vv.style.left="-1200px";
+vv.style.top="100px";
+}
+if (um==28) {vv.style.left="-1200px";
+
+}
+vv.src="v/"+'1 ('+ um + ').mp4';
+if (um==k) {um=0;}
+}
+}
+
+
+
+</script>
+
+<style type="text/css">
+
+
+
+
+
+#imgId{
+position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 1080px;
+  height: 1920px;
+}
+
+
+.tcl{
+position:fixed;
+top: 0px;
+left:0px;
+font-size:70px;
+font-weight:bold;
+// text-shadow: red 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+background-color:yellow;
+}
+
+
+.tcl1{
+position:fixed;
+top: 60px;
+left:0px;
+font-size:75px;
+font-weight:bold;
+// text-shadow: red 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+background-color:yellow;
+}
+
+.vcl{
+position:fixed;
+top:0px;
+left:-1200px;
+height:1920px;
+}
+
+
+
+
+
+
+
+.lyrics1cl{
+position:fixed;
+top:800px;
+left:50px;
+font-size:90px;
+color: white; 
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+width:900px;
+ font-weight:bold;
+
+}
+
+
+.lyrics2cl{
+position:fixed;
+top: 1100px;
+left:50px;
+font-size:90px;
+color:white;
+width:900px;
+font-weight:bold;
+text-shadow: blue 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+}
+
+.divcl {
+position:fixed;
+top: 0px;
+left:1000px;
+height:1920px;
+width:2500px;
+background-color:yellow;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<audio id="b1" src="beca.mp4" loop controls="controls" hidden="true"></audio>
+
+<div  id="vid" style="display:none;">
+<video class="vcl" autoplay loop muted>
+<source src="v/1 (1).mp4">
+</video>
+</div>
+
+
+<div id="in"  >
+<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+</div>
+
+<dvi  class="tcl" id="tid" style="display:none"  >
+<dvi>The One You Love 你所愛的人</dvi>
+
+</dvi>
+
+
+
+<div class="divcl"></div>
+
+
+<div id="lyrics1id" class="lyrics1cl" style="display:none;"></div>
+<div id="lyrics2id" class="lyrics2cl" style="display:none;"></div>
+
+<div
+
+</body>
+</html>
