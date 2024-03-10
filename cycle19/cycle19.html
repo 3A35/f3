@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <head>
-<title>song </title>
+<title>Always</title>
 <meta charset="utf-8">
 <script type="text/javascript">
+function begin(){
+ b1=document.getElementById("b1");
+b1.pause();
+begins=document.getElementById("beginsid");
+begins.play();
+document.getElementById("in").style.display="none" ;
+document.getElementById("beginid").style.display="block" ;
+document.getElementById("t1id").style.display="block" ;
+document.getElementById("t2id").style.display="block" ;
+tt=document.getElementById("t1id") ;
+setTimeout(get,12000);
+}
 
 function get(){
+begins.pause();
+document.getElementById("beginid").style.display="none" ;
+document.getElementById("t1id").style.display="none" ;
+document.getElementById("t2id").style.display="none" ;
 k=20;
 g=84; 
 um=1;
 t1=20;
 r1=55;
 r2=118;
-document.getElementById("in").style.display="none" ;
+
 
 document.getElementById("vid").style.display="block" ;
 
-document.getElementById("tid").style.display="block" ;
-tt=document.getElementById("tid") ;
+
+
 
 ly1=document.getElementById("lyrics1id");
 ly2=document.getElementById("lyrics2id");
 ly1.style.display="block"; 
 ly2.style.display="block"; 
  
- b1=document.getElementById("b1");
+
  ra=document.getElementById("rainid");
- b1.currentTime = 0;
+
 
 b1.play();
 
@@ -114,12 +130,12 @@ if(ti== 214+t1) {ly2.innerHTML="你的生命是陽光"}
 
 if(ti== 216+t1) {ly1.innerHTML="Chasing all the rain away"}
 if(ti== 216+t1) {ly2.innerHTML="趕走所有雨水"}
-if(ti== 222+t1) {ly1.innerHTML="When you come around you bring a brighter day"}
-if(ti== 222+t1) {ly2.innerHTML="你會帶來燦爛的日子"}
+if(ti== 221+t1) {ly1.innerHTML="When you come around you bring a brighter day"}
+if(ti== 221+t1) {ly2.innerHTML="你會帶來燦爛的日子"}
 if(ti==225+t1) {ly1.innerHTML="You're the perfect one"}
 if(ti== 225+t1) {ly2.innerHTML="你是如此完美"}
-if(ti== 231+t1) {ly1.innerHTML="For me and you forever will be"}
-if(ti== 231+t1) {ly2.innerHTML="對你我而言，永遠如此"}
+if(ti== 230+t1) {ly1.innerHTML="For me and you forever will be"}
+if(ti== 230+t1) {ly2.innerHTML="對你我而言，永遠如此"}
 if(ti== 236+t1) {ly1.innerHTML="And I will love you so for always"}
 if(ti==236+t1) {ly2.innerHTML="我會永遠的愛著你"}
 if(ti== 246+t1) {ly1.innerHTML=""}
@@ -159,7 +175,7 @@ vv.style.top="0px";
 }
 
 if (um==7) {vv.style.left="-1600px";
-vv.style.top="100px";
+vv.style.top="0px";
 }
 if (um==8) {vv.style.left="-1300px";
 
@@ -170,7 +186,7 @@ if (um==9) {vv.style.left="-1200px";
 }
 
 if (um==10) {vv.style.left="-1200px";
-vv.style.top="100px";
+vv.style.top="0px";
 }
 if (um==11) {vv.style.left="-1200px";
 }
@@ -181,7 +197,7 @@ if (um==12) {vv.style.left="-500px";
 }
 
 if (um==13) {vv.style.left="-1250px";
-vv.style.top="100px";
+vv.style.top="0px";
 }
 if (um==14) {vv.style.left="-1200px";
 
@@ -191,7 +207,7 @@ if (um==15) {vv.style.left="-1200px";
 vv.style.top="0px";
 }
 if (um==16) {vv.style.left="-1100px";
-vv.style.top="100px";
+vv.style.top="0px";
 }
 if (um==17) {vv.style.left="-1000px";
 
@@ -201,14 +217,14 @@ if (um==18) {vv.style.left="-1200px";
 vv.style.top="0px";
 }
 if (um==19) {vv.style.left="-1200px";
-vv.style.top="100px";
+vv.style.top="0px";
 }
 if (um==20) {vv.style.left="-1200px";
 
 }
 
 if (um==21) {vv.style.left="-1200px";
-vv.style.top="100px";
+vv.style.top="0px";
 }
 if (um==22) {vv.style.left="-1200px";
 
@@ -219,7 +235,7 @@ if (um==23) {vv.style.left="-1200px";
 }
 
 if (um==24) {vv.style.left="-1200px";
-vv.style.top="100px";
+vv.style.top="0px";
 }
 if (um==25) {vv.style.left="-1200px";
 }
@@ -230,7 +246,7 @@ if (um==26) {vv.style.left="-1200px";
 }
 
 if (um==27) {vv.style.left="-1200px";
-vv.style.top="100px";
+vv.style.top="0px";
 }
 if (um==28) {vv.style.left="-1200px";
 
@@ -259,27 +275,43 @@ position: fixed;
 }
 
 
-.tcl{
+.t1cl{
 position:fixed;
-top: 0px;
-left:0px;
+top: 700px;
+left:100px;
 width:1080px;
+color:green;
 height:100px;
-font-size:70px;
+font-size:130px;
 font-weight:bold;
 // text-shadow: red 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
-background-color:yellow;
+// background-color:yellow;
 }
+
+
+.t2cl{
+position:fixed;
+top: 1000px;
+left:50px;
+width:1080px;
+color:yellow;
+height:100px;
+font-size:140px;
+font-weight:bold;
+// text-shadow: red 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
+// background-color:yellow;
+}
+
 
 
 .tcl1{
 position:fixed;
-top: 60px;
-left:0px;
-font-size:75px;
+top: 1000px;
+left:300px;
+font-size:120px;
 font-weight:bold;
 // text-shadow: red 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
-background-color:yellow;
+// background-color:yellow;
 }
 
 .vcl{
@@ -290,7 +322,12 @@ height:1920px;
 }
 
 
-
+.begincl{
+position:fixed;
+top:0px;
+left:-1400px;
+height:1920px;
+}
 
 
 
@@ -333,7 +370,13 @@ background-color:yellow;
 </style>
 </head>
 <body>
+<audio id="beginsid" src="begins.mp4" loop controls="controls" hidden="true"></audio>
 
+<div  id="beginid" style="display:none;">
+<video class="begincl" autoplay loop muted>
+<source src="begin.mp4">
+</video>
+</div>
 
 
 <audio id="b1" src="beca.mp4" loop controls="controls" hidden="true"></audio>
@@ -346,13 +389,13 @@ background-color:yellow;
 
 
 <div id="in"  >
-<input type="image" src="miki.jpg" width="1200"  onClick="get()">
+<input type="image" src="miki.jpg" width="1200" height="1800"  onClick="begin()">
 </div>
 
-<dvi  class="tcl" id="tid" style="display:none"  >
-<dvi>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  Always 直到永遠 </dvi>
 
-</dvi>
+<dvi class="t1cl" id="t1id" style="display:none"> 西 洋 抒 情 歌 曲 </dvi>
+
+<dvi class="t2cl" id="t2id" style="display:none"> Always 直到永遠 </dvi>
 
 
 
