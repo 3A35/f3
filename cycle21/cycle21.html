@@ -20,9 +20,10 @@ setTimeout(get,6000);
 
 function get(){
 document.getElementById("beginid").style.display="none" ;
-document.getElementById("t1id").style.display="none" ;
-document.getElementById("t2id").style.display="none" ;
-k=44;
+ document.getElementById("t1id").style.display="none" ;
+setTimeout('document.getElementById("t2id").style.display="none" ;  ',24000 ); 
+
+k=16;
 g=84; 
 um=1;
 t1=0;
@@ -47,7 +48,7 @@ ly2.style.display="block";
 b1.play();
 
  
- setInterval(step, 14000);
+ setInterval(step, 13500);
 
 
 vv = document.querySelector('.vcl');
@@ -104,8 +105,8 @@ if(ti== 3*mi+24+t1) {ly2.innerHTML=""}
 
  function step() {
 um++; 
- document.getElementById("t1id").style.display="block" ;
- document.getElementById("t1id").innerHTML=um;
+//  document.getElementById("t1id").style.display="block" ;
+//  document.getElementById("t1id").innerHTML=um;
 if (um==1) {vv.style.left="-1200px";
 vv.style.top="0px";
 }
@@ -158,7 +159,7 @@ vv.style.top="0px";
 if (um==15) {vv.style.left="-1200px";
 vv.style.top="0px";
 }
-if (um==16) {vv.style.left="-1500px";
+if (um==16) {vv.style.left="-1300px";
 vv.style.top="0px";
 }
 if (um==17) {vv.style.left="-1200px";
@@ -229,7 +230,7 @@ position: fixed;
 
 .t1cl{
 position:fixed;
-top: 600px;
+top: 500px;
 left:50px;
 width:1080px;
 color:white;
@@ -243,15 +244,15 @@ font-weight:bold;
 
 .t2cl{
 position:fixed;
-top: 800px;
-left:10px;
+top: 700px;
+left:220px;
 width:1080px;
-color:yellow;
+color:red;
 height:100px;
-font-size:135px;
+font-size:180px;
 font-weight:bold;
 // text-shadow: red 0.1em 0em 0.05em,blue -0.1em 0em 0.05em;
-// background-color:yellow;
+// background-color:red;
 }
 
 
@@ -347,7 +348,7 @@ background-color:yellow;
 
 <dvi class="t1cl" id="t1id" style="display:none"> 台 語 精 選 歌 曲 </dvi>
 
-<dvi class="t2cl" id="t2id" style="display:none">------等無人-------</dvi>
+<dvi class="t2cl" id="t2id" style="display:none"> 等 無 人 </dvi>
 
 
 
