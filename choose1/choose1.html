@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+
+<script language="javascript">
+var right=0;
+var wrong=0;
+var um=0;
+
+t1="草原動物 壽命越短 意味著?";
+t11="容易覓食 ";
+t12="越強壯";
+t13="越弱小";
+t14="進化快";
+
+t2="野狗能殺死野牛的主要原因?  ";
+t21="慾望  ";
+t22="野狗的牙齒鋒利 ";
+t23="野狗跑的快 ";
+t24="野狗聰明";
+
+t3="為何大部分雄性動物 比較高大強壯？ ";
+t31="跑得快";
+t32="容易強暴得逞 ";
+t33=" 吃的多 ";
+t34="活比較久";
+
+t4="哪一個行星 俗稱地球的姊妹星？ ";
+t41="火星 ";
+t42="木星";
+t43="金星  ";
+t44="水星";
+
+t5="為何太陽系 看起來是空洞的? ";
+t51="本來就空洞的 ";
+t52="行星太少";
+t53="太陽太熱 ";
+t54="從微觀看宏觀  產生的錯覺";
+
+onload=function (){
+document.getElementById("t1id").innerHTML=t1;
+document.getElementById("la11").innerHTML=t11;
+document.getElementById("la12").innerHTML=t12;
+document.getElementById("la13").innerHTML=t13;
+document.getElementById("la14").innerHTML=t14;
+
+document.getElementById("t2id").innerHTML=t2;
+document.getElementById("la21").innerHTML=t21;
+document.getElementById("la22").innerHTML=t22;
+document.getElementById("la23").innerHTML=t23;
+document.getElementById("la24").innerHTML=t24;
+
+document.getElementById("t3id").innerHTML=t3;
+document.getElementById("la31").innerHTML=t31;
+document.getElementById("la32").innerHTML=t32;
+document.getElementById("la33").innerHTML=t33;
+document.getElementById("la34").innerHTML=t34;
+
+document.getElementById("t4id").innerHTML=t4;
+document.getElementById("la41").innerHTML=t41;
+document.getElementById("la42").innerHTML=t42;
+document.getElementById("la43").innerHTML=t43;
+document.getElementById("la44").innerHTML=t44;
+
+document.getElementById("t5id").innerHTML=t5;
+document.getElementById("la51").innerHTML=t51;
+document.getElementById("la52").innerHTML=t52;
+document.getElementById("la53").innerHTML=t53;
+document.getElementById("la54").innerHTML=t54;
+
+}
+
+function hisfu() {
+history.go(0);
+}
+function pr1() {
+keybid.currentTime = 1;
+keybid.play();
+document.getElementById("all1id").style.display="none"; 
+ if (a14.checked==true) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all2id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+  setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+setTimeout('document.getElementById("t2id").innerHTML=t2;',2000 ); 
+} 
+
+function pr2() {
+keybid.currentTime = 1;
+keybid.play();
+document.getElementById("all2id").style.display="none"; 
+
+ if (a21.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all3id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+ setTimeout('document.getElementById("t3id").innerHTML=t3;',2000 ); 
+}
+
+
+function pr3() {
+keybid.currentTime = 1;
+keybid.play();
+document.getElementById("all3id").style.display="none"; 
+ if (a32.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all4id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+ setTimeout('document.getElementById("t4id").innerHTML=t4;',2000 ); 
+}
+
+
+function pr4() {
+keybid.currentTime = 1;
+keybid.play();
+document.getElementById("all4id").style.display="none"; 
+ if (a43.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+ setTimeout('document.getElementById("all5id").style.display="block";',2000 ); 
+ setTimeout('document.getElementById("rightid").innerHTML="";',2000 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',2000 );
+ setTimeout('document.getElementById("t5id").innerHTML=t5;',2000 ); 
+}
+
+
+
+function pr5() {
+keybid.currentTime = 1;
+keybid.play();
+document.getElementById("all5id").style.display="none"; 
+ if (a54.checked==true ) {
+document.getElementById("rightid").innerHTML="答對了"; 
+right++;
+}
+else {
+document.getElementById("wrongid").innerHTML="答錯了"; 
+wrong++;
+}
+
+ setTimeout('document.getElementById("rightid").innerHTML="";',1500 ); 
+ setTimeout('document.getElementById("wrongid").innerHTML="";',1500 );
+
+sum=right*20;
+setTimeout('document.getElementById("rightid").innerHTML="總共答對"+right+"題";',2000 ); 
+setTimeout('document.getElementById("wrongid").innerHTML="錯"+wrong+"題";',2000 ); 
+setTimeout('document.getElementById("tfractionid").innerHTML=sum+"分";',2000 ); 
+setTimeout('document.getElementById("hisid").style.display="block";',3000 ); 
+
+if (sum==0) {setTimeout('document.getElementById("tendid").innerHTML="智 力 太 低";',2000 ); }
+if (sum==20) {setTimeout('document.getElementById("tendid").innerHTML="智力 國小程度";',2000 ); }
+if (sum==40) {setTimeout('document.getElementById("tendid").innerHTML="智力 國中程度";',2000 ); }
+if (sum==60) {setTimeout('document.getElementById("tendid").innerHTML=" 智 力 平 庸";',2000 ); }
+if (sum==80) {setTimeout('document.getElementById("tendid").innerHTML=" 高 智 商 ";',2000 ); }
+if (sum==100) {setTimeout('document.getElementById("tendid").innerHTML="博士等級的天才";',2000 ); }
+if (sum==100) {setTimeout('suid.play();',2000 ); }
+heightid.currentTime = 5;
+indieid.currentTime = 4;
+if (sum==80) {setTimeout('heightid.play();',2000 ); }
+if (sum==20) {setTimeout('marioid.play();',2000 ); }
+if (sum==40) {setTimeout('faid.play();',2000 ); }
+if (sum==60) {setTimeout('indieid.play();',2000 ); }
+if (sum==0) {setTimeout('sadid.play();',2000 ); }
+}
+
+
+</script>
+
+	<style>
+#tmid{
+position:fixed;
+top: 20px;
+left:50px;
+color: green;
+font-size:110px;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+	}
+
+#tfractionid{
+position:fixed;
+top: 900px;
+left:250px;
+color: green;
+font-size:120px;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+	}
+
+
+    .t1cl{
+position:fixed;
+top: 200px;
+left:50px;
+color:blue;
+width:900px;
+ font-size:80px;
+font-weight:bold;
+border-radius:20px;
+padding: 10px 20px;
+}
+
+#allid{
+position:fixed;
+top: 600px;
+left:50px;
+font-size:75px;
+font-weight:bold;
+width:900px;
+}
+
+
+
+
+
+
+.bucl{
+position:fixed;
+top: 1450px;
+left:350px;
+color:white;
+font-size:80px;
+font-weight:bold;
+background-color:red;
+border-radius:20px;
+padding: 10px 20px;
+border:none;
+}
+
+.hiscl{
+position:fixed;
+top: 1450px;
+left:350px;
+// font-size:70px;
+font-weight:bold;
+border-radius:20px;
+border:none;
+background: orangered;
+color: white;
+padding: 5px 10px;
+font-size: 4rem;
+outline: none;
+box-shadow: -12px 12px 0 hsl(10, 100%, 30%);
+}
+
+.backcl{
+position:fixed;
+top: 0px;
+left:0px;
+
+}
+
+.rightcl{
+position:fixed;
+top: 550px;
+left:250px;
+color:white;
+font-size:90px;
+font-weight:bold;
+background-color:red;
+border-radius:20px;
+
+}
+
+.wrongcl{
+position:fixed;
+top: 750px;
+left:250px;
+color:white;
+font-size:90px;
+font-weight:bold;
+background-color:brown;
+border-radius:20px;
+
+}
+
+
+#tendid{
+position:fixed;
+top: 1200px;
+left:150px;
+color:brown;
+font-size:100px;
+font-weight:bold;
+animation:blink 1s infinite;
+// animation-delay: 2s  ;
+}
+
+@keyframes blink {
+ 0%{opacity:1;}
+ 50%{opacity:0;}
+ 100%{opacity:1;}
+}
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<img src="back.jpg" width="1080" height="1920" id="backid" class="backcl"/>  
+
+<div id="tmid" >智力測驗</div>
+<div id="tfractionid" ></div>
+
+<div id="rightid" class="rightcl" ></div>
+<div id="wrongid" class="wrongcl"></div>
+<div id="tendid" ></div>
+
+         <div id="all1id" >
+	
+	<div id="t1id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a11" style="zoom:4;" name="n1" >
+		<label  id="la11" ></label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a12" style="zoom:4;" name="n1"  >
+		<label  id="la12"></label>
+	</div>
+
+	<div>
+		<input type="radio" id="a13" style="zoom:4;" name="n1"  >
+		<label  id="la13"></label>
+	</div>
+
+        <div>
+		<input type="radio" id="a14" style="zoom:4;" name="n1"  checked>
+		<label  id="la14"></label>
+        
+ <input id="bu1id" class="bucl"  type="button" value="送出" onclick="pr1();">
+ </div>
+ </div>
+ </div>
+
+         <div id="all2id"  style="display:none;">
+	
+	<div id="t2id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a21" style="zoom:4;" name="n2" >
+		<label id="la21" ></label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a22" style="zoom:4;" name="n2"  >
+		<label id="la22"></label>
+	</div>
+
+	<div>
+		<input type="radio" id="a23" style="zoom:4;" name="n2"  >
+		<label id="la23"></label>
+	</div>
+
+        <div>
+		<input type="radio" id="a24" style="zoom:4;" name="n2" checked >
+		<label id="la24"></label>
+      <input id="bu2id" class="bucl" type="button" value="送出" onclick="pr2();">
+	</div>
+        </div>
+        </div>
+
+  <div id="all3id"  style="display:none;">
+	
+	<div id="t3id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a31" style="zoom:4;" name="n3" >
+		<label id="la31" ></label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a32" style="zoom:4;" name="n3"  >
+		<label id="la32"></label>
+	</div>
+
+	<div>
+		<input type="radio" id="a33" style="zoom:4;" name="n3"  >
+		<label id="la33"></label>
+	</div>
+
+        <div>
+		<input type="radio" id="a34" style="zoom:4;" name="n3"  checked>
+		<label id="la34"></label>
+      <input id="bu3id" class="bucl" type="button" value="送出" onclick="pr3();">
+	</div>
+        </div>
+         </div>
+
+ <div id="all4id"  style="display:none;">
+	
+	<div id="t4id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a41" style="zoom:4;" name="n4" >
+		<label id="la41"  > </label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a42" style="zoom:4;" name="n4"  >
+		<label id="la42" ></label>
+	</div>
+
+	<div>
+		<input type="radio" id="a43" style="zoom:4;" name="n4"  >
+		<label id="la43" > </label>
+	</div>
+
+        <div>
+		<input type="radio" id="a44" style="zoom:4;" name="n4"  checked>
+		<label id="la44" ></label>
+      <input id="bu4id" class="bucl" type="button" value="送出" onclick="pr4();">
+	</div>
+        </div>
+         </div>
+
+
+ <div id="all5id"  style="display:none;">
+	
+	<div id="t5id" class="t1cl"></div>
+        <div id="allid">
+	<div>
+         
+		<input type="radio" id="a51" style="zoom:4;" name="n5" >
+		<label  id="la51" >兵蟻負責保護蟻巢 </label>
+	</div>
+  
+	<div>
+		<input type="radio" id="a52" style="zoom:4;" name="n5"  >
+		<label id="la52" >工蟻負責尋找食物</label>
+	</div>
+
+	<div>
+		<input type="radio" id="a53" style="zoom:4;" name="n5"  >
+		<label id="la53">蟻后負責餵養幼蟲 </label>
+	</div>
+
+        <div>
+		<input type="radio" id="a54" style="zoom:4;" name="n5"  checked>
+		<label id="la54" >雄蟻負責交配</label>
+      <input id="bu5id" class="bucl" type="button" value="送出" onclick="pr5();">
+	</div>
+        </div>
+         </div>
+
+
+<audio id="suid" src="success.mp4"  controls="controls" hidden="true"></audio>
+
+<audio id="faid" src="fail.mp4"  controls="controls" hidden="true"></audio>
+
+<audio id="sadid" src="sad.mp4"  controls="controls" hidden="true"></audio>
+
+<audio id="keybid" src="keyb.mp4"  controls="controls" hidden="true"></audio>
+
+<audio id="heightid" src="height.mp4"  controls="controls" hidden="true"></audio>
+
+<audio id="marioid" src="mario.mp4"  controls="controls" hidden="true"></audio>
+
+<audio id="indieid" src="indie.mp4"  controls="controls" hidden="true"></audio>
+
+ <input id="hisid" class="hiscl" type="button" value="再挑戰一次" style="display:none;" onclick="hisfu();">
+</body>
+
+</html>
+
+
+
+
+
