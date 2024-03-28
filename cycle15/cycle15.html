@@ -36,7 +36,7 @@ b1.play();
 
 vv = document.querySelector('.vcl');
 
-vv.style.left="-500px";
+vv.style.left="-1500px";
 
 setInterval(step1, 1000);
 
@@ -76,18 +76,19 @@ history.go(0);
  function step() {
 um++; 
 // tt.innerHTML=um;
-if (um==1) {vv.style.left="-500px";
+if (um==1) {vv.style.left="-1200px";
 vv.style.top="0px";
 }
-if (um==2) {vv.style.left="-1200px";
+if (um==2) {vv.style.left="-1100px";
 rss.pause();
 vv.style.top="100px";
 }
-if (um==3) {vv.style.left="-1600px";
-
+if (um==3) {vv.style.left="-1200px";
+ rss.play();
 }
 
 if (um==4) {vv.style.left="-1100px";
+rss.pause();
 vv.style.top="0px";
 }
 if (um==5) {vv.style.left="-1200px";
@@ -108,10 +109,12 @@ if (um==9) {vv.style.left="-1600px";
 
 }
 
-if (um==10) {vv.style.left="-1300px";
+if (um==10) {vv.style.left="-1200px";
+ rss.play();
 vv.style.top="100px";
 }
 if (um==11) {vv.style.left="-1200px";
+rss.pause();
 }
 
 
