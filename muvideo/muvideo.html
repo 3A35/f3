@@ -24,10 +24,11 @@ setTimeout(get,8000);
 function get(){
 document.getElementById("beginid").style.display="none" ;
  document.getElementById("t1id").style.display="none" ;
-setTimeout('document.getElementById("t2id").style.display="none" ;  ',14000 ); 
+setTimeout('document.getElementById("t2id").style.display="none" ;  ',12000 ); 
 count=0;
-k=20;
+k=6;
 g=84; 
+ddd=0;
 um=1;
 a=0;
 b=87;
@@ -112,36 +113,33 @@ if(ti== 105+d) {ly2.innerHTML="    ";}
 }
 
  function step() {
-if (count==2) {count=0;}
-
 um++; 
-count++;
 
 vv = document.querySelector('.v'+um+'cl');
 umr=um-1;
-if (umr==0) {umr=5;}
-document.getElementById("v"+um+"id").style.display="block" ;
-document.getElementById("v"+umr+"id").style.display="none" ;
 
- document.getElementById("t1id").style.display="block" ;
- document.getElementById("t1id").innerHTML=um;
+document.getElementById("v"+um+"id").style.display="block" ;
+ if (um>1) {document.getElementById("v"+umr+"id").style.display="none" ;}
+ if (ddd==1) {document.getElementById("v"+k+"id").style.display="none" ;}
+//  document.getElementById("t1id").style.display="block" ;
+//  document.getElementById("t1id").innerHTML=um;
 if (um==1) {
-vv.style.left="-1300px";
+vv.style.left="-1200px";
 vv.style.top="0px";
 rss.play();
 }
 
 if (um==2) {
-vv.style.left="-1400px";
-vv.style.top="-0px";
+vv.style.left="-1900px";
+vv.style.top="0px";
 rss.pause();
 }
 
 
 
 if (um==3) {
-vv.style.left="-900px";
-vv.style.top="-100px";
+vv.style.left="-1200px";
+vv.style.top="0px";
 }
 
 if (um==4) {
@@ -151,11 +149,11 @@ vv.style.top="0px";
 
 if (um==5) {
 vv.style.left="-1200px";
-vv.style.top="-100px";
+vv.style.top="0px";
 }
 
 if (um==6) {
-vv.style.left="-1050px";
+vv.style.left="-1200px";
 vv.style.top="0px";
 }
 
@@ -246,7 +244,9 @@ vv.style.top="0px";
 }
 if (um==28) {vv.style.left="-1200px";
 }
-if (um==k) {um=0;}
+if (um==k) {um=0; ddd=1;}
+else {ddd=0;}
+
 }
 }
 
@@ -271,9 +271,10 @@ position: fixed;
 
 .t1cl{
 position:fixed;
-top: 400px;
-left:50px;
+top: 300px;
+ left:50px;
 width:1080px;
+// justify-content: center;
 color:white;
 height:100px;
 font-size:125px;
@@ -285,9 +286,10 @@ font-weight:bold;
 
 .t2cl{
 position:fixed;
-top: 600px;
-left:150px;
+top: 500px;
+  left:250px;
 width:1080px;
+//  justify-content: center;
 color:yellow;
 height:100px;
 font-size:180px;
@@ -379,53 +381,7 @@ top:0px;
 height:1920px;
 }
 
-.v13cl{
-position:fixed;
-top:0px;
-height:1920px;
-}
 
-.v14cl{
-position:fixed;
-top:0px;
-height:1920px;
-}
-
-.v15cl{
-position:fixed;
-top:0px;
-height:1920px;
-}
-
-.v16cl{
-position:fixed;
-top:0px;
-height:1920px;
-}
-
-.v17cl{
-position:fixed;
-top:0px;
-height:1920px;
-}
-
-.v18cl{
-position:fixed;
-top:0px;
-height:1920px;
-}
-
-.v19cl{
-position:fixed;
-top:0px;
-height:1920px;
-}
-
-.v20cl{
-position:fixed;
-top:0px;
-height:1920px;
-}
 
 .begincl{
 position:fixed;
@@ -521,103 +477,12 @@ background-color:yellow;
 </video>
 </div>
 
+
 <div  id="v6id" style="display:none;">
 <video class="v6cl" autoplay loop muted>
 <source src="v/1 (6).mp4">
 </video>
 </div>
-
-<div  id="v7id" style="display:none;">
-<video class="v7cl" autoplay loop muted>
-<source src="v/1 (7).mp4">
-</video>
-</div>
-
-
-<div  id="v8id" style="display:none;">
-<video class="v8cl" autoplay loop muted>
-<source src="v/1 (8).mp4">
-</video>
-</div>
-
-<div  id="v9id" style="display:none;">
-<video class="v9cl" autoplay loop muted>
-<source src="v/1 (9).mp4">
-</video>
-</div>
-
-<div  id="v10id" style="display:none;">
-<video class="v10cl" autoplay loop muted>
-<source src="v/1 (10).mp4">
-</video>
-</div>
-
-
-
-<div  id="v11id" style="display:none;">
-<video class="v11cl" autoplay loop muted>
-<source src="v/1 (11).mp4">
-</video>
-</div>
-
-<div  id="v12id" style="display:none;">
-<video class="v12cl" autoplay loop muted>
-<source src="v/1 (12).mp4">
-</video>
-</div>
-
-
-<div  id="v13id" style="display:none;">
-<video class="v13cl" autoplay loop muted>
-<source src="v/1 (13).mp4">
-</video>
-</div>
-
-<div  id="v14id" style="display:none;">
-<video class="v14cl" autoplay loop muted>
-<source src="v/1 (14).mp4">
-</video>
-</div>
-
-<div  id="v15id" style="display:none;">
-<video class="v15cl" autoplay loop muted>
-<source src="v/1 (15).mp4">
-</video>
-</div>
-
-<div  id="v16id" style="display:none;">
-<video class="v16cl" autoplay loop muted>
-<source src="v/1 (16).mp4">
-</video>
-</div>
-
-<div  id="v17id" style="display:none;">
-<video class="v17cl" autoplay loop muted>
-<source src="v/1 (17).mp4">
-</video>
-</div>
-
-
-<div  id="v18id" style="display:none;">
-<video class="v18cl" autoplay loop muted>
-<source src="v/1 (18).mp4">
-</video>
-</div>
-
-<div  id="v19id" style="display:none;">
-<video class="v19cl" autoplay loop muted>
-<source src="v/1 (19).mp4">
-</video>
-</div>
-
-<div  id="v20id" style="display:none;">
-<video class="v20cl" autoplay loop muted>
-<source src="v/1 (20).mp4">
-</video>
-</div>
-
-
-
 
 
 <div id="in"  >
