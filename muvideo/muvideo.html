@@ -5,6 +5,9 @@
 <script type="text/javascript">
 function begin(){
  b1=document.getElementById("b1");
+ rss=document.getElementById("rsid");
+ rss.play();
+rss.pause();
 b1.play();
 b1.pause();
 begins=document.getElementById("beginsid");
@@ -22,8 +25,8 @@ function get(){
 document.getElementById("beginid").style.display="none" ;
  document.getElementById("t1id").style.display="none" ;
 setTimeout('document.getElementById("t2id").style.display="none" ;  ',14000 ); 
-
-k=34;
+count=0;
+k=10;
 g=84; 
 um=1;
 a=0;
@@ -35,7 +38,7 @@ r2=118;
 mi=61;
 
 document.getElementById("vid").style.display="block" ;
-
+document.getElementById("v2id").style.display="none" ;
 
 
 
@@ -47,7 +50,7 @@ ly2.style.display="block";
 
  ra=document.getElementById("rainid");
 
-
+ rss.play();
 b1.play();
 
  
@@ -55,6 +58,7 @@ b1.play();
 
 
 vv = document.querySelector('.vcl');
+vv2 = document.querySelector('.v2cl');
 
 vv.style.left="-1200px";
 
@@ -119,44 +123,88 @@ if(ti== 105+d) {ly2.innerHTML="    ";}
 }
 
  function step() {
+if (count==2) {count=0;}
+vv2.src="v/"+'1 ('+ um+ ').mp4';
 um++; 
+count++;
+
+
  document.getElementById("t1id").style.display="block" ;
   document.getElementById("t1id").innerHTML=um;
 if (um==1) {vv.style.left="-1300px";
 vv.style.top="0px";
 }
-if (um==2) {vv.style.left="-1400px";
+if (um==2) {
+vv.style.left="-1400px";
 vv.style.top="-0px";
+vv2.style.left="-1400px";
+vv2.style.top="-0px";
+rss.pause();
 }
-if (um==3) {vv.style.left="-900px";
+
+
+
+if (um==3) {
+vv.style.left="-900px";
 vv.style.top="-100px";
+vv2.style.left="-900px";
+vv2.style.top="-100px";
 }
 
-if (um==4) {vv.style.left="-1200px";
+if (um==4) {
+vv.style.left="-1200px";
 vv.style.top="0px";
+vv2.style.left="-1200px";
+vv2.style.top="0px";
 }
-if (um==5) {vv.style.left="-1200px";
+
+if (um==5) {
+vv.style.left="-1200px";
 vv.style.top="-100px";
+vv2.style.left="-1200px";
+vv2.style.top="-100px";
 }
-if (um==6) {vv.style.left="-1050px";
+
+if (um==6) {
+vv.style.left="-1050px";
 vv.style.top="0px";
+vv2.style.left="-1050px";
+vv2.style.top="0px";
 }
 
-if (um==7) {vv.style.left="-1700px";
+if (um==7) {
+vv.style.left="-1700px";
 vv.style.top="0px";
-}
-if (um==8) {vv.style.left="-1200px";
-
-}
-
-if (um==9) {vv.style.left="-1100px";
-
+vv2.style.left="-1700px";
+vv2.style.top="0px";
 }
 
-if (um==10) {vv.style.left="-1500px";
+if (um==8) {
+vv.style.left="-1200px";
 vv.style.top="0px";
+vv2.style.left="-1200px";
+vv2.style.top="0px";
 }
-if (um==11) {vv.style.left="-1200px";
+
+if (um==9) {
+vv.style.left="-1100px";
+vv.style.top="0px";
+vv2.style.left="-1100px";
+vv2.style.top="0px";
+}
+
+if (um==10) {
+vv.style.left="-1500px";
+vv.style.top="0px";
+vv2.style.left="-1500px";
+vv2.style.top="0px";
+}
+
+if (um==11) {
+vv.style.left="-1200px";
+vv.style.top="0px";
+vv2.style.left="-1200px";
+vv2.style.top="0px";
 }
 
 
@@ -219,7 +267,17 @@ vv.style.top="0px";
 if (um==28) {vv.style.left="-1200px";
 
 }
+
+
+
 vv.src="v/"+'1 ('+ um + ').mp4';
+
+
+
+
+
+
+
 if (um==k) {um=0;}
 }
 }
@@ -289,6 +347,15 @@ height:1920px;
 }
 
 
+.v2cl{
+position:fixed;
+top:0px;
+left:-700px;
+height:1920px;
+}
+
+
+
 .begincl{
 position:fixed;
 top:-200px;
@@ -347,12 +414,31 @@ background-color:yellow;
 
 
 <audio id="b1" src="beca.mp4" loop controls="controls" hidden="true"></audio>
+<audio id="rsid" src="rs.mp4" loop controls="controls" hidden="true"></audio>
+
+<div  id="v2id" style="display:none;">
+<video class="v2cl" autoplay loop muted>
+<source src="v/1 (1).mp4">
+</video>
+</div>
+
+
 
 <div  id="vid" style="display:none;">
 <video class="vcl" autoplay loop muted>
 <source src="v/1 (1).mp4">
 </video>
 </div>
+
+
+
+
+
+
+
+
+
+
 
 
 <div id="in"  >
